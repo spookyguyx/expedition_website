@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+.text-news{
+    text-align:center;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.news_img{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.news_img1{
+   width:60%;
+}
+
+.text_news{
+    color:#828282;
+    margin-bottom:40px;
+    padding:10px;
+}

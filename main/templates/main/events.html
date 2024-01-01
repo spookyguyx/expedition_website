@@ -1,0 +1,45 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Мероприятия{% endblock %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'main/css/events.css' %}">
+{% endblock %}
+{% block content %}
+<h3 class="text-publications">Мероприятия</h3>
+<div class="events">
+    <div class="container-1">
+        <div class="events_container">
+            <div class="events_container_left">
+                <img class="events_container_img" src="https://avatars.mds.yandex.net/i?id=2efacf985941f07174f0ee3f49cb79fd37200417-10896002-images-thumbs&n=13">
+            </div>
+            <div class="events_container_right">
+                <div class="events_container_right_h1">
+                    <h1>Круглый стол</h1>
+                </div>
+                <div class="events_container_right_h3">
+                    <h3>19 апреля 2022 год</h3>
+                </div>
+                <div class="events_container_right_p">
+                    <p>Итоговый круглый  стол по результатам</p>
+                </div>
+            </div>
+        </div>
+        <div class="events_container">
+            <div class="events_container_left">
+                <img src="{% static 'main/images/photo.jpg' %}" alt="gggg">
+            </div>
+            <div class="events_container_right">
+                <div class="events_container_right_h1">
+                    <h1>Круглый стол</h1>
+                </div>
+                <div class="events_container_right_h3">
+                    <h3>19 апреля 2022 год</h3>
+                </div>
+                <div class="events_container_right_p">
+                    <p>Итоговый круглый  стол по результатам</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
