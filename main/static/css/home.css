@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    margin:0;
+    padding:0;
+    /*font-family: "Ubuntu", sans-serif;*/
+}
+
+h1, h2, h3, h4, p{
+    margin: 0;
+}
+
+.container{
+    width: 1290px;
+    margin: 0 auto 0 auto;
+}
+
+.title{
+    margin: 0 auto;
+}
+
+.expedition_item img{
+    width: 628px;
+    height: 197px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.expedition_item{
+    background-color: #D9D9D9;
+    width: 628px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.expedition_info{
+    padding: 20px;
+}
+
+.expedition_items{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
