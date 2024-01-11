@@ -8,4 +8,6 @@ class EventsPage(TemplateView):
 class PublicationPage(TemplateView):
     template_name = 'main/publication.html'
 class Separate_newsPage(TemplateView):
-    template_name = 'main/Separate_news.html'
+    template_name = 'main/separate_news.html'
+class PhotoPage(TemplateView):
+    template_name = 'main/photo.html'
