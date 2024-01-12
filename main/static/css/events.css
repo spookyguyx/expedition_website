@@ -37,12 +37,14 @@ font-weight:700;
 
 .events_container{
     margin-bottom:20px;
-    margin-left:35px;
+    padding-left:35px;
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .events_container_img{
     border-width:10px;
-
 }
 
 .events_container_left{
@@ -58,5 +60,15 @@ font-weight:700;
 @media(max-width:474px){
     .events_container{
     margin-left:0;
+    }
+}
+@media(max-width:595px){
+    .events_container_img {
+        width: 150px;
+        height: 150px;
+    }
+    .events_container{
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }

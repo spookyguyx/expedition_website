@@ -20,6 +20,7 @@ h1, h2, h3, h4, p{
 .nav{
     display:flex;
     justify-content: space-between;
+    z-index:50;
 }
 .nav ul{
     display:flex;
@@ -32,7 +33,6 @@ h1, h2, h3, h4, p{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color:#EDEDED;
 }
 
@@ -48,7 +48,8 @@ display:flex !important;
 
 .header_blue{
     background-color: #000072;
-    height: 100%;
+    width:100%;
+    position:fixed;
 }
 
 .header_blue_items{
@@ -132,13 +133,13 @@ display:flex !important;
     font-size:22px;
 }
 
-
 body{
     font-family:PT Sans;
 }
 
 .header_white_1{
     height:100%;
+    margin-top:100px;
 }
 
 .header_white_menu{
@@ -183,6 +184,8 @@ body{
 .header_white_2{
     margin-bottom:20px;
     background-color:white;
+    position:sticky;
+    top:100px;
 }
 .footer_black_column_1 p{
     font-size:15px;
@@ -234,7 +237,7 @@ h3{
 .burger{
     display: none;
     position: relative;
-    z-index: 50;
+    z-index: 6;
     align-items: center;
     justify-content: flex-end;
     width: 30px;
@@ -276,16 +279,23 @@ h3{
 @media(max-width:1000px){
     .burger { display: flex }
     .nav{
-        display: none;
-        flex-direction: column;
-        top: 0; bottom: 0; left: 0; right: 0;
-        z-index: 50;
-        overflow-y: auto;
-        padding: 50px 40px;
-        background-color: #000072;
-        animation: burgerAnimation 0.4s;
-        width:100%;
-        height:100%;
+    display: none;
+    justify-content: flex-start;
+    gap: 20px;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: #000072;
+    animation: burgerAnimation 0.4s;
+    width: 75%;
+    height: 100%;
+    margin-top:100px;
+
     }
     .nav a{
         color:white;
@@ -302,7 +312,6 @@ h3{
 
 
 }
-
 @keyframes burgerAnimation {
     from {opacity: 0}
     to {opacity: 1}
@@ -324,7 +333,7 @@ h3{
        font-size:18px;
 }
 
-@media(max-width:577px){
+@media(max-width:595px){
     .logo_white_1{
         width:220px;
         height:70px;
@@ -345,9 +354,7 @@ h3{
     .header_blue_items{
     gap: 1px 30px;
     }
-    .header_blue{
-    padding-bottom:40px;
-    }
+
     .header_logo_1{
     margin-bottom:10px;
     }
@@ -355,17 +362,47 @@ h3{
     text-align:center;
     }
     .header_right{
-    gap:65px;
+    gap: 30px;
     }
-
+    .header_blue{
+    padding-bottom:40px;
+    }
+    .nav{
+    margin-top:120px;
+    }
+    .header_white_1{
+    margin-top: 140px;
+    }
+    .footer_black p{
+    font-size:12px;
+    }
+    .text_news{
+    font-size:13px;
+    }
 }
 
 @media(max-width:474px){
     .header_right{
-    gap:40px;
+    gap:14px;
+    }
+    .header_icons img {
+    margin-left: 0;
+    }
+    .logo_white_1 {
+    width: 170px;
+    height: 50px;
+    }
+    .logo_sdk {
+    width: 37px;
+    height: 37px;
+}
+    .header_white_right p {
+        font-size: 14px;
     }
 
 }
+@media(max-width:414px){
 
+}
 
 

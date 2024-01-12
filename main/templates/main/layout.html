@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     {% block style1 %}{% endblock %}
     {% block style2 %}{% endblock %}
 </head>
@@ -25,20 +25,20 @@
                 <div class="container">
                     <div class="header_blue_items">
                         <div class="header_logo_1">
-                            <img src="{% static 'main/img/logo.png' %}" alt="gggg">
+                            <img src="{% static 'images/logo.png' %}" alt="gggg">
                         </div>
                         <div class="header_right">
                             <div class="header_icons">
                                     <a href="#">
-                                        <img src="{% static 'main/images/vk.png' %}" alt="gggg">
+                                        <img src="{% static 'images/vk.png' %}" alt="gggg">
                                     </a>
                                     <a href="#">
-                                       <img src="{% static 'main/images/tg.png' %}" alt="gggg">
+                                       <img src="{% static 'images/tg.png' %}" alt="gggg">
                                     </a>
                             </div>
                             <form class="search-wrapper">
                                 <input class="search" type="text">
-                                <button class="search_btn" ><img class="lupa" src="{% static 'main/images/search.png' %}" alt=""></button>
+                                <button class="search_btn" ><img class="lupa" src="{% static 'images/search.png' %}" alt=""></button>
                             </form>
                             <div class="burger">
                                 <span></span>
@@ -46,16 +46,16 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
             </div>
                 <div class="header_white_1">
                     <div class="container">
                         <div class="header_white_items">
 
                             <div class="header_white_logo">
-                                <img class="logo_white_1" src="{% static 'main/images/logo2.png' %}" alt="gggg">
+                                <img class="logo_white_1" src="{% static 'images/logo2.png' %}" alt="gggg">
                             </div>
-                             <img class="logo_sdk" src="{% static 'main/images/logo_sdk.png' %}" alt="fff">
+                             <img class="logo_sdk" src="{% static 'images/logo_sdk.png' %}" alt="fff">
                             <div class="header_white_right">
                                 <p class="head_white_text">Экспедиции Студенческого научного-образовательного центра</p>
                             </div>
@@ -83,14 +83,12 @@
                     </div>
                 </div>
         </header>
-
         <div class="content_box">
             <div class="container container-1">
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
-
     </div>
     <footer>
         <div class="footer_black">
