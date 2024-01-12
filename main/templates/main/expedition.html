@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expedition</title>
-    <link rel="stylesheet" href="css/expedition.css">
+    <link rel="stylesheet" href="{% static 'css/expedition.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -61,10 +62,10 @@
                 </div>
             </div>
             <div class="photo">
-                <img src="img/exp1.png" alt="exp">
-                <img src="img/exp2.png" alt="exp">
-                <img src="img/exp3.png" alt="exp">
-                <img src="img/exp4.png" alt="exp">
+                <img src="{% static 'images/exp1.png' %}" alt="exp">
+                <img src="{% static 'images/exp2.png' %}" alt="exp">
+                <img src="{% static 'images/exp3.png' %}" alt="exp">
+                <img src="{% static 'images/exp4.png' %}" alt="exp">
             </div>
             <div class="video">
                 <iframe class="iframe_video" src="https://www.youtube.com/embed/ivbCA2qMQGY?si=NP_Xg4qYtK0c6BGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -90,31 +91,31 @@
                 <div class="swiper partners-slider">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                       <div class="swiper-slide">
-                        <img src="img/partner2.png" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                     </div>     
                 </div>
@@ -122,6 +123,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/expedition.js"></script>
+    <script src="{% static 'js/expedition.js' %}"></script>
 </body>
 </html>
