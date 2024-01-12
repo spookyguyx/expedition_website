@@ -1,162 +1,152 @@
+{% extends 'main/layout.html' %}
 {% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/тутаев.png' %}" alt="Тутаев" class="img_anons">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/тутаев.png' %}" alt="Тутаев" class="img_anons">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
-                  </div>
-                  <div class="swiper-slide">
-                    <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
-                  </div>
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-1">
+    <div class="content">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="{% static 'images/тутаев.png' %}" alt="Тутаев" class="img_anons">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'images/тутаев.png' %}" alt="Тутаев" class="img_anons">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
+              </div>
+              <div class="swiper-slide">
+                <img src="{% static 'images/Анонс.png' %}" alt="Тутаев" class="img_anons">
+              </div>
+            </div>
+            <div class="anons_navigations">
+                <button class="anons_btn anons_btn_prev">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.5584 25L32.8709 35.3125L29.925 38.2583L16.6667 25L29.925 11.7417L32.8709 14.6896L22.5584 25.0021V25Z" fill="#1C1C1C" fill-opacity="0.6"/>
+                    </svg>
+                </button>
+                <button class="anons_btn anons_btn_next">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.4416 25L17.1291 14.6875L20.075 11.7417L33.3333 25L20.075 38.2583L17.1291 35.3104L27.4416 24.9979V25Z" fill="#1C1C1C" fill-opacity="0.6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="title">
+            <h1>Текущие экспедиции:</h1>
+          </div>
+          <div class="expeditions_now">
+            <div class="expedition_items">
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
                 </div>
-                <div class="anons_navigations">
-                    <button class="anons_btn anons_btn_prev">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.5584 25L32.8709 35.3125L29.925 38.2583L16.6667 25L29.925 11.7417L32.8709 14.6896L22.5584 25.0021V25Z" fill="#1C1C1C" fill-opacity="0.6"/>
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
+                </div>
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="title">
+            <h1>Завершенные экспедиции:</h1>
+          </div>
+          <div class="expeditions_now">
+            <div class="expedition_items">
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
+                </div>
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
+                </div>
+                <div class="expedition_item">
+                    <img src="{% static 'images/тутаев.png' %}" alt="">
+                    <div class="expedition_info">
+                        <p>Экспедиция ТУТАЕВ (2023)</p>
+                        <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="partners">
+            <div class="partner_title">
+                <h1>Партнёры экспедиции:</h1>
+            </div>
+            <div class="navigation">
+                <div class="partners_navigation">
+                    <button class="patners_btn patners_btn_prev">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M36.0934 40L52.5934 56.5L47.8801 61.2134L26.6667 40L47.8801 18.7867L52.5934 23.5034L36.0934 40.0034V40Z" fill="#1C1C1C"/>
                         </svg>
                     </button>
-                    <button class="anons_btn anons_btn_next">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M27.4416 25L17.1291 14.6875L20.075 11.7417L33.3333 25L20.075 38.2583L17.1291 35.3104L27.4416 24.9979V25Z" fill="#1C1C1C" fill-opacity="0.6"/>
-                        </svg>                                          
+                    <button class="patners_btn patners_btn_next">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M43.9068 40L27.4068 23.5L32.1202 18.7866L53.3335 40L32.1202 61.2133L27.4068 56.4966L43.9068 39.9966V40Z" fill="#1C1C1C"/>
+                        </svg>
                     </button>
                 </div>
-                <div class="swiper-pagination"></div>
-              </div>
-              <div class="title">
-                <h1>Текущие экспедиции:</h1>
-              </div>
-              <div class="expeditions_now">
-                <div class="expedition_items">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="title">
-                <h1>Завершенные экспедиции:</h1>
-              </div>
-              <div class="expeditions_now">
-                <div class="expedition_items">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="partners">
-                <div class="partner_title">
-                    <h1>Партнёры экспедиции:</h1>
-                </div>
-                <div class="navigation">
-                    <div class="partners_navigation">
-                        <button class="patners_btn patners_btn_prev">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M36.0934 40L52.5934 56.5L47.8801 61.2134L26.6667 40L47.8801 18.7867L52.5934 23.5034L36.0934 40.0034V40Z" fill="#1C1C1C"/>
-                            </svg>       
-                        </button>
-                        <button class="patners_btn patners_btn_next">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M43.9068 40L27.4068 23.5L32.1202 18.7866L53.3335 40L32.1202 61.2133L27.4068 56.4966L43.9068 39.9966V40Z" fill="#1C1C1C"/>
-                            </svg>   
-                        </button>
-                    </div>
-                </div>
-                <div class="swiper partners-slider">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                    </div>     
+            </div>
+            <div class="swiper partners-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                  </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="{% static 'js/home.js' %}"></script>
-</body>
-</html>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="{% static 'js/home.js' %}"></script>
+
+{% endblock %}
