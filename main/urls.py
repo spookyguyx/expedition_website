@@ -11,4 +11,5 @@ urlpatterns = [
     path('expedition/', ExpeditionPage.as_view(), name='expedition'),
     path('team/', TeamPage.as_view(), name='team'),
     path('news/', NewsPage.as_view(), name='news'),
+    path('map/', MapPage.as_view(), name='map'),
 ]
