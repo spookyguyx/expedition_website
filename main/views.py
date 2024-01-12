@@ -18,3 +18,5 @@ class NewsPage(TemplateView):
     template_name = 'main/news.html'
 class TeamPage(TemplateView):
     template_name = 'main/team.html'
+class MapPage(TemplateView):
+    template_name = 'main/map.html'
