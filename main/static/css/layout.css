@@ -50,6 +50,7 @@ display:flex !important;
     background-color: #000072;
     width:100%;
     position:fixed;
+    z-index:6;
 }
 
 .header_blue_items{
@@ -186,6 +187,7 @@ body{
     background-color:white;
     position:sticky;
     top:100px;
+    z-index:6;
 }
 .footer_black_column_1 p{
     font-size:15px;

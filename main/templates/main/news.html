@@ -1,40 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEWS</title>
-    <link rel="stylesheet" href="css/news.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="content">
-            <div class="title">
-                <h1>Новости</h1>
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-1">
+    <div class="content">
+        <div class="title">
+            <h1>Новости</h1>
+        </div>
+        <div class="news_item">
+            <div class="photo">
+                <img src="{% static 'images/news.png' %}" alt="team">
             </div>
-            <div class="news_item">
-                <div class="photo">
-                    <img src="img/news.png" alt="team">
-                </div>
-                <div class="info">
-                    <h2>«Science Slam МИИГАиК – 2023»</h2>
-                    <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
-                </div>
+            <div class="info">
+                <h2>«Science Slam МИИГАиК – 2023»</h2>
+                <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
             </div>
-            <div class="news_item">
-                <div class="photo">
-                    <img src="img/news.png" alt="team">
-                </div>
-                <div class="info">
-                    <h2>«Science Slam МИИГАиК – 2023»</h2>
-                    <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
-                </div>
+        </div>
+        <div class="news_item">
+            <div class="photo">
+                <img src="{% static 'images/news.png' %}" alt="team">
+            </div>
+            <div class="info">
+                <h2>«Science Slam МИИГАиК – 2023»</h2>
+                <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
             </div>
         </div>
     </div>
-</body>
+</div>
+
+{% endblock %}
 </html>
