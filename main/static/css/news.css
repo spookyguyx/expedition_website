@@ -20,13 +20,15 @@ h1, h2, h3, h4, p{
 }
 
 
-
 p{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 h1{
     font-size: 26px;
+}
+h2{
+    font-size: 24px;
 }
 .title{
     text-align: center;
@@ -50,19 +52,68 @@ h1{
 .info p{
     color: #828282;
 }
+@media screen and (max-width: 1200px){
+    .photo img{
+        width: 270px;
+    }
+    p{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .photo img{
+        width: 240px;
+    }
+}
 
 @media screen and (max-width: 767px){
     p{
-        font-size: 42px;
+        font-size: 16px;
     }
     
     h1{
-        font-size: 46px;
+        font-size: 22px;
     }
     h2{
-        font-size: 44px;
+        font-size: 20px;
     }
     .photo img{
-        width: 500px;
+        width: 200px;
+    }
+}
+@media screen and (max-width: 520px){
+    p{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .photo img{
+        width: 170px;
+    }
+}
+@media screen and (max-width: 420px){
+    p{
+        font-size: 12px;
+    }
+
+    h1{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .photo img{
+        width: 140px;
     }
 }
