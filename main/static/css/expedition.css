@@ -105,6 +105,7 @@ h1{
 }
 .partner{
     height: 150px;
+    width: 150px;
     object-fit: cover;
 }
 .patners_btn{
@@ -145,16 +146,94 @@ h1{
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 767px){
-    p{
-        font-size: 42px;
+@media screen and (max-width: 1399px){
+    .photo img{
+        width: 520px;
+        margin-bottom: 1%;
     }
-    
+}
+@media screen and (max-width: 1199px){
+    .photo img{
+        width: 430px;
+        margin-bottom: 1%;
+    }
+    .partner{
+        height: 120px;
+        width: 120px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .photo img{
+        width: 400px;
+        margin-bottom: 1%;
+    }
+    .partner{
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+    }
+    p{
+        font-size: 20px;
+    }
     h1{
-        font-size: 46px;
+        font-size: 24px;
     }
     .exp_title p{
-        font-size: 44px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .photo img{
+        width: 315px;
+        margin-bottom: 1%;
+    }
+    .partner{
+        height: 90px;
+        width: 90px;
+        object-fit: cover;
+    }
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .exp_title p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 796px){
+    .photo img{
+        width: 314px;
+        margin-bottom: 1%;
+    }
+    p{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 773px){
+    .photo img{
+        width: 300px;
+        margin-bottom: 1%;
+    }
+    p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    p{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .exp_title p{
+        font-size: 24px;
     }
     .buttons_1{
         display: flex;
@@ -198,15 +277,86 @@ h1{
         margin-bottom: 1%;
     }
     .iframe_video{
-        width: 80%;
-        height: 525px;
+        width: 100%;
+        height: 500px;
     }
     .partner_title h1{
-        font-size: 42px;
+        font-size: 24px;
     }
     .partner{
-        height: 200px;
+        height: 100px;
+        width: 100px;
         object-fit: cover;
     }
+}
 
+@media screen and (max-width: 573px){
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .exp_title p{
+        font-size: 22px;
+    }
+    .iframe_video{
+        width: 100%;
+        height: 100%;
+    }
+    .button_1{
+        padding: 10px;
+        width: 70%;
+    }
+    .button_2{
+        padding: 10px;
+        width: 70%;
+    }
+    .partner_title h1{
+        font-size: 22px;
+    }
+    .partner{
+        height: 90px;
+        width: 90px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 573px){
+    p{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .exp_title p{
+        font-size: 22px;
+    }
+    .iframe_video{
+        width: 100%;
+        height: 100%;
+    }
+    .button_1{
+        padding: 10px;
+        width: 100%;
+    }
+    .button_2{
+        padding: 10px;
+        width: 100%;
+    }
+    .partner_title h1{
+        font-size: 22px;
+    }
+    .partner{
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+    }
+    .partner_arrow{
+        width: 60px;
+        height: 60px;
+    }
+    .patners_btn{
+        margin-top: -15px;
+    }
 }
