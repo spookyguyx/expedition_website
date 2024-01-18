@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="title">
-            <h1>Экспедиция Иднакар (2022)</h1>
+            <h1>{{ el.name }}</h1>
         </div>
         <div class="buttons_1">
             <a href="{% url 'photo' el.article_slug %}" class="button_1">
@@ -24,9 +24,11 @@
             <a href="{% url 'events' el.article_slug %}" class="button_2">
                 <p>Мероприятия</p>
             </a>
-            <div class="button_2">
-                <p>Результаты экспедиции</p>
-            </div>
+            <a href="{% url 'result' el.article_slug %}">
+                <div class="button_2">
+                    <p>Результаты экспедиции</p>
+                </div>
+            </a>
         </div>
         <div class="exp_info">
             <div class="exp_title">

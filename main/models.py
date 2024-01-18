@@ -3,9 +3,9 @@ from django.db import models
 
 class Article(models.Model):
     name = models.CharField(max_length=50)
+    name_long = models.CharField(max_length=75)
     text = models.TextField()
     photo_main_page = models.ImageField()
-    result_expedition = models.TextField()
     current_expedition = models.BooleanField()
     photo_archive = models.FileField()
     video = models.CharField(max_length=100)
@@ -19,11 +19,23 @@ class PhotoHome(models.Model):
     photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     photo_home = models.ImageField()
 
+    def __str__(self):
+        return self.photo_home_id
+
+
+class ResultsExpedition(models.Model):
+    result = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
+    text_result = models.TextField()
+    image = models.ImageField()
+
 
 class Partners(models.Model):
     partners_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     partners = models.TextField()
     photo_partners = models.ImageField()
+
+    def __str__(self):
+        return self.partners_id
 
 
 class ArticleImage(models.Model):
@@ -37,6 +49,9 @@ class ArticleImage(models.Model):
 class Map(models.Model):
     post = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     maps = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.post
 
 
 class Events(models.Model):
@@ -55,6 +70,9 @@ class Team(models.Model):
     members_name = models.CharField(max_length=25)
     role_member = models.CharField(max_length=50)
     photo_members = models.FileField()
+
+    def __str__(self):
+        return self.team_id
 
 
 class Slider(models.Model):

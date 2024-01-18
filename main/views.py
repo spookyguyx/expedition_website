@@ -108,3 +108,12 @@ def events_page_view(request, slug):
   #      }
 #        return render(request, 'main/expedition.html', context)
  #   pass
+
+
+def result_page_view(request, slug):
+    if request.method == 'GET':
+        context = {
+            'results': ResultsExpedition.objects.filter(event_id__article_slug=slug)
+        }
+        return render(request, 'main/result.html', context)
+    pass

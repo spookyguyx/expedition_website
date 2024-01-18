@@ -12,4 +12,5 @@ urlpatterns = [
     path('<slug:slug>/map/', map_page_view, name='map'),
     path('<slug:slug>/team/', team_page_view, name='team'),
     path('<slug:slug>/events/', events_page_view, name='events'),
+    path('<slug:slug>/result/', result_page_view, name='result')
 ]
