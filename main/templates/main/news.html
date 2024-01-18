@@ -9,24 +9,19 @@
         <div class="title">
             <h1>Новости</h1>
         </div>
-        <div class="news_item">
-            <div class="photo">
-                <img src="{% static 'images/news.png' %}" alt="team">
+        {% for el in news %}
+            <div class="news_item">
+                <a href="{{ el.news_slug }}">
+                    <div class="photo">
+                        <img src="{{ el.photo.url }}" alt="team">
+                    </div>
+                    <div class="info">
+                        <h2>{{ el.name }}</h2>
+                        <p>{{ el.text }}</p>
+                    </div>
+                </a>
             </div>
-            <div class="info">
-                <h2>«Science Slam МИИГАиК – 2023»</h2>
-                <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
-            </div>
-        </div>
-        <div class="news_item">
-            <div class="photo">
-                <img src="{% static 'images/news.png' %}" alt="team">
-            </div>
-            <div class="info">
-                <h2>«Science Slam МИИГАиК – 2023»</h2>
-                <p>7 декабря в 16:00, Terra Progressum (6 корпус, 4 подъезд, 1 этаж, 115 кабинет)</p>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 

@@ -24,12 +24,16 @@ class PostImageAdmin(admin.ModelAdmin):
     pass
 
 
+class NewsAdmin(admin.ModelAdmin):
+    prepopulated_fields = {"news_slug": ["name"]}
+
+
 admin.site.register(Slider)
-admin.site.register(News)
 admin.site.register(Anons)
 admin.site.register(Events)
 admin.site.register(Team)
 admin.site.register(Map)
 admin.site.register(Partners)
 admin.site.register(PhotoHome)
+admin.site.register(News, NewsAdmin)
 

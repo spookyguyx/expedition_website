@@ -7,10 +7,7 @@ class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
     context_object_name = 'articles'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['images'] = Anons.objects.all()
-        return context
+
 
 
 #class EventsPage(TemplateView):
@@ -21,8 +18,8 @@ class PublicationPage(TemplateView):
     template_name = 'main/publication.html'
 
 
-class Separate_newsPage(TemplateView):
-    template_name = 'main/separate_news.html'
+#class Separate_newsPage(TemplateView):
+#    template_name = 'main/separate_news.html'
 
 
 class ExpeditionPage(DetailView):
@@ -56,8 +53,17 @@ def photo_page_view(request, slug):
     pass
 
 
-class NewsPage(TemplateView):
+class NewsPage(ListView):
     template_name = 'main/news.html'
+    queryset = News.objects.all()
+    context_object_name = 'news'
+
+
+class Separate_newsPage(DetailView):
+    template_name = "main/separate_news.html"
+    model = News
+    slug_field = 'news_slug'
+    context_object_name = 'el'
 
 
 #class TeamPage(TemplateView):

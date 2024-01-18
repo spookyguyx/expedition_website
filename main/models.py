@@ -66,6 +66,7 @@ class News(models.Model):
     text = models.TextField()
     photo = models.ImageField()
     video = models.TextField()
+    news_slug = models.SlugField()
 
     def __str__(self):
         return self.name
