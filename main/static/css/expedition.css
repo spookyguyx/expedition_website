@@ -43,6 +43,11 @@ h1{
     text-align: center;
     cursor: pointer;
 }
+
+a:hover{
+    color: black;
+}
+
 .button_2{
     background-color: #C9C9C9;
     padding: 15px;

@@ -85,6 +85,10 @@ h1{
     width: 600px;
     border-radius: 4px;
     margin-bottom: 2%;
+    min-height: 340px;
+}
+a:hover{
+    color: black;
 }
 
 .expedition_item:hover{

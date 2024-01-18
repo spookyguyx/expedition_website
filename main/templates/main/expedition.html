@@ -10,27 +10,19 @@
             <h1>Экспедиция Иднакар (2022)</h1>
         </div>
         <div class="buttons_1">
-            <a href="{% url 'photo' el.article_slug %}">
-                <div class="button_1">
-                    <p>Фотоархив</p>
-                </div>
+            <a href="{% url 'photo' el.article_slug %}" class="button_1">
+                <p>Фотоархив</p>
             </a>
-            <a href="{% url 'map' el.article_slug %}">
-                <div class="button_1">
-                    <p>Интерактивная карта</p>
-                </div>
+            <a href="{% url 'map' el.article_slug %}" class="button_1">
+                <p>Интерактивная карта</p>
             </a>
-            <a href="{% url 'team' el.article_slug %}">
-                <div class="button_1">
-                    <p>Команда</p>
-                </div>
+            <a href="{% url 'team' el.article_slug %}" class="button_1">
+                <p>Команда</p>
             </a>
         </div>
         <div class="buttons_2">
-            <a href="{% url 'events' el.article_slug %}">
-                <div class="button_2">
-                    <p>Мероприятия</p>
-                </div>
+            <a href="{% url 'events' el.article_slug %}" class="button_2">
+                <p>Мероприятия</p>
             </a>
             <div class="button_2">
                 <p>Результаты экспедиции</p>

@@ -6,12 +6,13 @@
 {% block content %}
 <div class="container-1">
     <div class="content">
-        {% for element in images %}
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
+                    {% for element in images %}
                     <div class="swiper-slide">
                         <img src="{{ element.photo.url }}" alt="Тутаев" class="img_anons">
                     </div>
+                    {% endfor %}
                 </div>
                 <div class="anons_navigations">
                     <button class="anons_btn anons_btn_prev">
@@ -26,46 +27,51 @@
                     </button>
                 </div>
                 <div class="swiper-pagination"></div>
-              </div>
+            </div>
+
               <div class="title">
                 <h1>Текущие экспедиции:</h1>
               </div>
-              {% for el in articles %}
-                 {% if el.current_expedition == True %}
+
                       <div class="expeditions_now">
                         <div class="expedition_items">
-                            <a href="{{ el.article_slug }}">
-                                <div class="expedition_item">
-                                    <img src="{{ el.photo_main_page.url }}">
-                                    <div class="expedition_info">
-                                        <p>{{ el.name }}</p>
-                                        <p>{{ el.text }}</p>
-                                    </div>
-                                </div>
-                            </a>
+                            {% for el in articles %}
+                                {% if el.current_expedition == True %}
+                                    <a href="{{ el.article_slug }}">
+                                        <div class="expedition_item">
+                                            <img src="{{ el.photo_main_page.url }}">
+                                            <div class="expedition_info">
+                                                <p>{{ el.name }}</p>
+                                                <p>{{ el.text }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                       </div>
-                    {% endif %}
-                {% endfor %}
+
                 <h1>Завершенные экспедиции:</h1>
               </div>
-              {% for el in articles %}
-                 {% if el.current_expedition == False %}
+
                       <div class="expeditions_now">
                         <div class="expedition_items">
-                            <a href="{{ el.article_slug }}">
-                                <div class="expedition_item">
-                                    <img src="{{ el.photo_main_page.url}}" alt="">
-                                    <div class="expedition_info">
-                                        <p>{{ el.name }}</p>
-                                        <p>{{ el.text }}</p>
-                                    </div>
-                                </div>
-                            </a>
+                            {% for el in articles %}
+                                {% if el.current_expedition == False %}
+                                    <a href="{{ el.article_slug }}">
+                                        <div class="expedition_item">
+                                            <img src="{{ el.photo_main_page.url}}" alt="">
+                                            <div class="expedition_info">
+                                                <p>{{ el.name }}</p>
+                                                <p>{{ el.text }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                       </div>
-                    {% endif %}
-                {% endfor %}
+
               <div class="partners">
                 <div class="partner_title">
                     <h1>Партнёры экспедиции:</h1>
@@ -116,7 +122,7 @@
                     </div>
                 </div>
             </div>
-        {% endfor %}
+
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
