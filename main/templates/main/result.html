@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Результаты{% endblock %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/separate_news.css' %}">
+{% endblock %}
+{% block content %}
+<h3 class="text-news">Результаты экспедиции:</h3>
+<div class="container-1">
+    {% for el in results %}
+        <div class="news_img">
+            <img class="news_img1" src="{{ el.image.url }}" alt="gggg">
+        </div>
+        <div class="container"
+            <p class="text_news">
+                {{ el.text_result }}
+            </p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

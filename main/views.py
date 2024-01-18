@@ -7,7 +7,10 @@ class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
     context_object_name = 'articles'
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['images'] = Anons.objects.all()
+        return context
 
 
 #class EventsPage(TemplateView):
@@ -113,7 +116,7 @@ def events_page_view(request, slug):
 def result_page_view(request, slug):
     if request.method == 'GET':
         context = {
-            'results': ResultsExpedition.objects.filter(event_id__article_slug=slug)
+            'results': ResultsExpedition.objects.filter(result__article_slug=slug)
         }
         return render(request, 'main/result.html', context)
     pass

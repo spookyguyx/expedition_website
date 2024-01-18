@@ -19,8 +19,6 @@ class PhotoHome(models.Model):
     photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     photo_home = models.ImageField()
 
-    def __str__(self):
-        return self.photo_home_id
 
 
 class ResultsExpedition(models.Model):
@@ -50,8 +48,7 @@ class Map(models.Model):
     post = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     maps = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.post
+
 
 
 class Events(models.Model):
@@ -67,12 +64,10 @@ class Events(models.Model):
 
 class Team(models.Model):
     team_id = models.ForeignKey("Article", on_delete=models.CASCADE)
-    members_name = models.CharField(max_length=25)
+    members_name = models.CharField(max_length=75)
     role_member = models.CharField(max_length=50)
     photo_members = models.FileField()
 
-    def __str__(self):
-        return self.team_id
 
 
 class Slider(models.Model):

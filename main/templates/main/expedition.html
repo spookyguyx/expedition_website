@@ -24,11 +24,10 @@
             <a href="{% url 'events' el.article_slug %}" class="button_2">
                 <p>Мероприятия</p>
             </a>
-            <a href="{% url 'result' el.article_slug %}">
-                <div class="button_2">
-                    <p>Результаты экспедиции</p>
-                </div>
+            <a href="{% url 'result' el.article_slug %}" class="button_2">
+                <p>Результаты экспедиции</p>
             </a>
+
         </div>
         <div class="exp_info">
             <div class="exp_title">
@@ -38,42 +37,65 @@
                 <p>{{ el.text }}</p>
             </div>
         </div>
-        {% for ele in images %}
             <div class="photo">
-                <img src="{{ ele.photo_home.url }}" alt="Photo">
+                {% for ele in images %}
+                    <img src="{{ ele.photo_home.url }}" alt="Photo">
+                {% endfor %}
             </div>
-        {% endfor %}
+
         <div class="video">
             <iframe class="iframe_video" src="{{ el.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <div class="partners">
-            <div class="partner_title">
-                <h1>Партнёры экспедиции:</h1>
-            </div>
-            <div class="navigation">
-                <div class="partners_navigation">
-                    <button class="patners_btn patners_btn_prev">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M36.0934 40L52.5934 56.5L47.8801 61.2134L26.6667 40L47.8801 18.7867L52.5934 23.5034L36.0934 40.0034V40Z" fill="#1C1C1C"/>
-                        </svg>
-                    </button>
-                    <button class="patners_btn patners_btn_next">
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M43.9068 40L27.4068 23.5L32.1202 18.7866L53.3335 40L32.1202 61.2133L27.4068 56.4966L43.9068 39.9966V40Z" fill="#1C1C1C"/>
-                        </svg>
-                    </button>
+            <div class="partners">
+                <div class="partner_title">
+                    <h1>Партнёры экспедиции:</h1>
                 </div>
-            </div>
-            {% for element in partners %}
+                <div class="navigation">
+                    <div class="partners_navigation">
+                        <button class="patners_btn patners_btn_prev">
+                            <svg class="partner_arrow" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.0934 40L52.5934 56.5L47.8801 61.2134L26.6667 40L47.8801 18.7867L52.5934 23.5034L36.0934 40.0034V40Z" fill="#1C1C1C"/>
+                            </svg>
+                        </button>
+                        <button class="patners_btn patners_btn_next">
+                            <svg class="partner_arrow" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43.9068 40L27.4068 23.5L32.1202 18.7866L53.3335 40L32.1202 61.2133L27.4068 56.4966L43.9068 39.9966V40Z" fill="#1C1C1C"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 <div class="swiper partners-slider">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img src="{{ element.photo_partners.url }}" alt="partner" class="partner">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
                       </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
+            </div>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

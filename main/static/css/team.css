@@ -21,11 +21,14 @@ h1, h2, h3, h4, p{
 
 
 p{
-    font-size: 24px;
+    font-size: 20px;
 }
 
 h1{
     font-size: 26px;
+}
+h2{
+    font-size: 24px;
 }
 .title{
     text-align: center;
@@ -47,24 +50,94 @@ h1{
     margin-left: calc(190px + 2%);
     margin-bottom: 25px;
 }
-
-@media screen and (max-width: 767px){
-    p{
-        font-size: 42px;
-    }
-    
-    h1{
-        font-size: 46px;
-    }
-    h2{
-        font-size: 44px;
-    }
+@media screen and (max-width: 1200px){
     .photo img{
-        width: 300px;
-        height: 300px;
+        width: 160px;
+        height: 160px;
     }
     .team_other{
-        margin-left: calc(290px + 2%);
+        margin-left: calc(160px + 2%);
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 1000px){
+    .photo img{
+        width: 140px;
+        height: 140px;
+    }
+    p{
+        font-size: 18px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .team_other{
+        margin-left: calc(140px + 2%);
+        margin-bottom: 25px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    p{
+        font-size: 18px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 22px;
+    }
+    .photo img{
+        width: 130px;
+        height: 130px;
+    }
+    .team_other{
+        margin-left: calc(130px + 2%);
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 520px){
+    p{
+        font-size: 16px;
+    }
+
+    h1{
+        font-size: 22px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .photo img{
+        width: 110px;
+        height: 110px;
+    }
+    .team_other{
+        margin-left: calc(110px + 2%);
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 420px){
+    p{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .photo img{
+        width: 100px;
+        height: 100px;
+    }
+    .team_other{
+        margin-left: calc(100px + 2%);
         margin-bottom: 25px;
     }
 }
