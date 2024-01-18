@@ -11,25 +11,11 @@
     <h3 class="text-publications">Фотоархив:</h3>
     <p class="text-publications-day">День 1:</p>
     <div class="img-container">
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-        <div class="img">
-            <img src="{% static 'images/photo.jpg' %}" alt="gggg">
-        </div>
-    </div>
+        {% for el in archive %}
+            <div class="img">
+                <img src="{{ el.images.url }}" >
+            </div>
+        {% endfor %}
     <div class="pop-up">
         <span>&times;</span>
         <img src="{% static 'images/photo.jpg' %}" alt="gggg">

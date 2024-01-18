@@ -68,16 +68,13 @@
                         <div class="header_white_menu">
                             <nav class="nav">
                                 <ul class="ul_1">
-                                    <a href="#">На главную</a>
+                                    <a href="{% url 'home' %}">На главную</a>
                                 </ul>
                                 <ul>
-                                    <a href="#">Новости</a>
+                                    <a href="{% url 'news' %}">Новости</a>
                                 </ul>
                                 <ul>
-                                    <a href="#">Фотоархив</a>
-                                </ul>
-                                <ul>
-                                    <a href="#">Публикации</a>
+                                    <a href="{% url 'publication' %}">Публикации</a>
                                 </ul>
                             </nav>
                         </div>

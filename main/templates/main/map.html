@@ -81,7 +81,11 @@
                     </div>
                 </div>
         </header>
-        <iframe src="https://kartfak.ru/development/oka/" frameborder="0" style="width: 100vw; height: 550px;"></iframe>
+        {% for el in map %}
+            <div>
+                <iframe src="{{ el.maps }}" frameborder="0" style="width: 100vw; height: 550px;"></iframe>
+            </div>
+        {% endfor %}
     </div>
     <footer>
         <div class="footer_black">

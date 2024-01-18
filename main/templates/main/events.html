@@ -7,39 +7,25 @@
 {% block content %}
 <h3 class="text-publications">Мероприятия</h3>
 <div class="events">
-    <div class="container-1">
-        <div class="events_container">
-            <div class="events_container_left">
-                <img class="events_container_img" src="{% static 'images/photo.jpg' %}" alt="gggg">
-            </div>
-            <div class="events_container_right">
-                <div class="events_container_right_h1">
-                    <h1>Круглый стол</h1>
+    {% for el in event %}
+        <div class="container-1">
+            <div class="events_container">
+                <div class="events_container_left">
+                    <img class="events_container_img" src="{{ el.photo_events.url }}" alt="gggg">
                 </div>
-                <div class="events_container_right_h3">
-                    <h3>19 апреля 2022 год</h3>
-                </div>
-                <div class="events_container_right_p">
-                    <p>Итоговый круглый  стол по результатам</p>
-                </div>
-            </div>
-        </div>
-        <div class="events_container">
-            <div class="events_container_left">
-                <img class="events_container_img" src="{% static 'images/photo.jpg' %}" alt="gggg">
-            </div>
-            <div class="events_container_right">
-                <div class="events_container_right_h1">
-                    <h1>Круглый стол</h1>
-                </div>
-                <div class="events_container_right_h3">
-                    <h3>19 апреля 2022 год</h3>
-                </div>
-                <div class="events_container_right_p">
-                    <p>Итоговый круглый  стол по результатам</p>
+                <div class="events_container_right">
+                    <div class="events_container_right_h1">
+                        <h1>{{ el.title_event }}</h1>
+                    </div>
+                    <div class="events_container_right_h3">
+                        <h3>{{ el.date_event }}</h3>
+                    </div>
+                    <div class="events_container_right_p">
+                        <p>{{ el.description_event }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endfor %}
 </div>
 {% endblock %}

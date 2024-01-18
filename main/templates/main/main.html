@@ -41,71 +41,42 @@
           <div class="title">
             <h1>Текущие экспедиции:</h1>
           </div>
-          <div class="expeditions_now">
-            <div class="expedition_items">
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
+          {% for el in articles %}
+             {% if el.current_expedition == True %}
+                  <div class="expeditions_now">
+                    <div class="expedition_items">
+                        <a href="{{ el.article_slug }}">
+                            <div class="expedition_item">
+                                <img src="{{ el.photo_home.url }}">
+                                <div class="expedition_info">
+                                    <p>{{ el.name }}</p>
+                                    <p>{{ el.text }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-          </div>
-          <div class="title">
+                  </div>
+                {% endif %}
+            {% endfor %}
             <h1>Завершенные экспедиции:</h1>
           </div>
-          <div class="expeditions_now">
-            <div class="expedition_items">
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
+          {% for el in articles %}
+             {% if el.current_expedition == False %}
+                  <div class="expeditions_now">
+                    <div class="expedition_items">
+                        <a href="{{ el.article_slug }}">
+                            <div class="expedition_item">
+                                <img src="{{ el.photo_home.url}}" alt="">
+                                <div class="expedition_info">
+                                    <p>{{ el.name }}</p>
+                                    <p>{{ el.text }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="expedition_item">
-                        <img src="{% static 'images/тутаев.png' %}" alt="">
-                        <div class="expedition_info">
-                            <p>Экспедиция ТУТАЕВ (2023)</p>
-                            <p>Образы будущего в пространстве малых городов: Тутаев, Романовская сторона</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-          </div>
+                  </div>
+                {% endif %}
+            {% endfor %}
           <div class="partners">
             <div class="partner_title">
                 <h1>Партнёры экспедиции:</h1>
