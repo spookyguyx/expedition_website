@@ -7,6 +7,10 @@ class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
     context_object_name = 'articles'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['images'] = Anons.objects.all()
+        return context
 
 
 #class EventsPage(TemplateView):
@@ -26,10 +30,13 @@ class ExpeditionPage(DetailView):
     model = Article
     slug_field = 'article_slug'
     context_object_name = 'el'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['partners'] = Partners.objects.all()
+        slug = self.kwargs.get('slug')
+        context['images'] = PhotoHome.objects.filter(photo_home_id__article_slug=slug)
         return context
+
 
 
 

@@ -31,5 +31,5 @@ admin.site.register(Events)
 admin.site.register(Team)
 admin.site.register(Map)
 admin.site.register(Partners)
-
+admin.site.register(PhotoHome)
 

@@ -44,12 +44,11 @@
                 <p>{{ el.text }}</p>
             </div>
         </div>
-        <div class="photo">
-            <img src="{% static 'images/exp1.png' %}" alt="exp">
-            <img src="{% static 'images/exp2.png' %}" alt="exp">
-            <img src="{% static 'images/exp3.png' %}" alt="exp">
-            <img src="{% static 'images/exp4.png' %}" alt="exp">
-        </div>
+        {% for ele in images %}
+            <div class="photo">
+                <img src="{{ ele.photo_home.url }}" alt="Photo">
+            </div>
+        {% endfor %}
         <div class="video">
             <iframe class="iframe_video" src="{{ el.video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>

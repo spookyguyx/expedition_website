@@ -4,8 +4,8 @@ from django.db import models
 class Article(models.Model):
     name = models.CharField(max_length=50)
     text = models.TextField()
+    photo_main_page = models.ImageField()
     result_expedition = models.TextField()
-    photo_home =models.ImageField()
     current_expedition = models.BooleanField()
     photo_archive = models.FileField()
     video = models.CharField(max_length=100)
@@ -15,6 +15,9 @@ class Article(models.Model):
         return self.name
 
 
+class PhotoHome(models.Model):
+    photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
+    photo_home = models.ImageField()
 
 
 class Partners(models.Model):
