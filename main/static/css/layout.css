@@ -42,7 +42,6 @@ display:flex !important;
 }
 
 .container{
-    width: 1200px;
     margin: 0 auto 0 auto;
 }
 
@@ -216,6 +215,7 @@ body{
 
 .content_box{
     background-color: #EDEDED;
+    min-height: calc(100vh - 80px);
 }
 
 .container.container-1{
