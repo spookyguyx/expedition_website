@@ -6,6 +6,7 @@ urlpatterns = [
     path('', HomePage.as_view(), name='home'),
     path('publication/', PublicationPage.as_view(), name='publication'),
     path('news/', NewsPage.as_view(), name='news'),
+    path('addexp/', Add_expPage.as_view(), name='addexp'),
     path('news/<slug:slug>/', Separate_newsPage.as_view(), name='separate_news'),
     path('<slug:slug>/', ExpeditionPage.as_view(), name='expedition'),
     path('<slug:slug>/photo/', photo_page_view, name='photo'),

@@ -1,0 +1,158 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-1">
+    <div class="content">
+        <h1 class="admin_title">Добавить экспедицию:</h1>
+        <form method="POST">
+            <div class="form_group">
+                <label class="classic_label">Полное название экспедиции:</label>
+                <input type="text">
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Короткое название экспедиции:</label>
+                <input type="text">
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Описание проекта:</label>
+                <textarea></textarea>
+            </div>
+            <!--<div class="form_group">
+                <button type="submit" class="form_button">Войти</button>
+            </div>-->
+            <div class="form_group">
+                <label class="classic_label">Видеоматериал:</label>
+                <input type="text">
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Интерактивная карта:</label>
+                <input type="text">
+            </div>
+            <div class="form_group form_group_file">
+                <input type="file" name="file" id="file" class="add_file">
+                <label for="file"><span>Загрузить фото для описания</span></label>
+            </div>
+            <div class="form_group form_group_file">
+                <input type="file" name="file" id="file" class="add_file">
+                <label for="file"><span>Загрузить фото для фотоархива</span></label>
+            </div>
+        </form>
+        <h1 class="admin_title">Раздел "Партнёры экспедиции"</h1>
+        <form method="POST">
+            <div class="partners_items">
+                <div class="partners_item">
+                    <div class="form_group">
+                        <label class="classic_label">Название организации:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group form_group_file">
+                        <input type="file" name="file" id="file" class="add_file">
+                        <label for="file"><span>Загрузить фото</span></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="add_item">
+            <button class="add_button add_button_partners">
+                <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
+                    <line x1="40" y1="20.7354" y2="20.7354" stroke="white" stroke-width="8"/>
+                </svg>
+            </button>
+            <div class="add_title">
+                <p>Добавить партнёра</p>
+            </div>
+        </div>
+        <h1 class="admin_title">Раздел "Команда проекта"</h1>
+        <form method="POST">
+            <div class="teams_items">
+                <div class="teams_item">
+                    <div class="form_group">
+                        <label class="classic_label">ФИО участника:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group">
+                        <label class="classic_label">Роль в команде:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group form_group_file">
+                        <input type="file" name="file" id="file" class="add_file">
+                        <label for="file"><span>Загрузить фото</span></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="add_item">
+            <button class="add_button add_button_teams">
+                <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
+                    <line x1="40" y1="20.7354" y2="20.7354" stroke="white" stroke-width="8"/>
+                </svg>
+            </button>
+            <div class="add_title">
+                <p>Добавить участника</p>
+            </div>
+        </div>
+        <h1 class="admin_title">Раздел "Мероприятия"</h1>
+        <form method="POST">
+            <div class="events_items">
+                <div class="events_item">
+                    <div class="form_group">
+                        <label class="classic_label">Название:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group">
+                        <label class="classic_label">Дата:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group">
+                        <label class="classic_label">Описание:</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="form_group form_group_file">
+                        <input type="file" name="file" id="file" class="add_file">
+                        <label for="file"><span>Загрузить фото</span></label>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="add_item">
+            <button class="add_button add_button_events">
+                <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
+                    <line x1="40" y1="20.7354" y2="20.7354" stroke="white" stroke-width="8"/>
+                </svg>
+            </button>
+            <div class="add_title">
+                <p>Добавить мероприятие</p>
+            </div>
+        </div>
+        <h1 class="admin_title">Раздел "Результаты экспедиции"</h1>
+        <form method="POST">
+            <div class="results_items">
+                <div class="results_item">
+                    <div class="form_group">
+                        <label class="classic_label">3D-модель:</label>
+                        <input type="text">
+                    </div>
+                    <div class="form_group form_group_file">
+                        <input type="file" name="file" id="file" class="add_file">
+                        <label for="file"><span>Загрузить фото</span></label>
+                    </div>
+                    <div class="form_group">
+                        <label class="classic_label">Описание:</label>
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="save_exp_btn">
+            <input type="submit" class="exp_btn" value="Сохранить экспедицию">
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js1 %}<script src="{% static 'js/add.js' %}"></script>{% endblock %}

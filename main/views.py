@@ -3,6 +3,9 @@ from django.views.generic import TemplateView, ListView, DetailView
 from .models import *
 
 
+class Add_expPage(TemplateView):
+    template_name = 'main/add.html'
+
 class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()

@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'PT Sans', sans-serif;
+    background-color: #EDEDED;
+}
+
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 22px;
+}
+
+h1{
+    font-size: 26px;
+}
+
+.admin_title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form_group{
+    margin-bottom: 12px;
+}
+
+.classic_label, .form_group input {
+      display: block;
+      width: 100%;
+}
+
+.classic_label {
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+
+.form_group input {
+    padding: 10px;
+    border: 2px solid #000072;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000072;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+.add_file{
+    width: 0.1 px;
+    height: 0.1 px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.add_file + label{
+    color: white;
+    background-color: #000072;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 15px;
+}
+.add_button{
+    background-color: #000072;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+}
+.add_title p{
+    font-size: 18px;
+}
+.add_title{
+   margin: auto 0;
+}
+.add_item{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.partners_items{
+    box-sizing: border-box;
+    display: block;
+}
+.exp_btn{
+    background-color: #000072;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    padding: 15px;
+}
+.save_exp_btn{
+    text-align: center;
+}
