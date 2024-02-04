@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Поиск{% endblock %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+{% block content %}
+<div class="search_page">
+    <div class="container-2">
+        <h3 class="text-search">Поиск</h3>
+         <form class="search-wrapper">
+             <input class="search2" type="text">
+             <button class="search_btn" ><img class="lupa" src="{% static 'images/search.png' %}" alt=""></button>
+         </form>
+        <div class="border-bottom"></div>
+        <div class="block_search">
+            <a href="#"><h3 class="search_heading">СНОц МИИГАиК R&D: основные проекты и достижения 2022-2023</h3></a>
+            <p class="search_text">Мы решили рассказать, почему 2022-2023 у. г. для СНОц стал особенно продуктивным. Для кого-то учебный год 2022-2023 уже закончился после сдачи всех экзаменов, кто-то уже получил диплом. Учебный ...</p>
+            <div class="border-bottom"></div>
+        </div>
+        <div class="block_search">
+            <a href="#"><h3 class="search_heading">СНОц МИИГАиК R&D: основные проекты и достижения 2022-2023</h3></a>
+            <p class="search_text">Мы решили рассказать, почему 2022-2023 у. г. для СНОц стал особенно продуктивным. Для кого-то учебный год 2022-2023 уже закончился после сдачи всех экзаменов, кто-то уже получил диплом. Учебный ...</p>
+            <div class="border-bottom"></div>
+        </div>
+        <div class="block_search">
+            <a href="#"><h3 class="search_heading">СНОц МИИГАиК R&D: основные проекты и достижения 2022-2023</h3></a>
+            <p class="search_text">Мы решили рассказать, почему 2022-2023 у. г. для СНОц стал особенно продуктивным. Для кого-то учебный год 2022-2023 уже закончился после сдачи всех экзаменов, кто-то уже получил диплом. Учебный ...</p>
+            <div class="border-bottom"></div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
