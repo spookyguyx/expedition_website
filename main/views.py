@@ -123,3 +123,6 @@ def result_page_view(request, slug):
         }
         return render(request, 'main/result.html', context)
     pass
+
+class SearchPage(TemplateView):
+    template_name = 'main/search.html'
