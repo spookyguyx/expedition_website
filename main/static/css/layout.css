@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
 a{
@@ -216,6 +218,7 @@ body{
 
 .content_box{
     background-color: #EDEDED;
+    min-height: calc(100vh - 80px);
 }
 
 .container.container-1{
