@@ -37,9 +37,8 @@
                                        <img src="{% static 'images/tg.png' %}" alt="gggg">
                                     </a>
                             </div>
-                            <form class="search-wrapper">
-                                <input class="search" type="text">
-                                <button class="search_btn" ><img class="lupa" src="{% static 'images/search.png' %}" alt=""></button>
+                            <form action="{% url 'search' %}" method="get">
+                                <input name="q" type="text" placeholder="Search...">
                             </form>
                             <div class="burger">
                                 <span></span>
@@ -47,7 +46,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
                 <div class="header_white_1">
                     <div class="container">

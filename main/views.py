@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 from .models import *
+from django.db.models import Q
 
 
 class Add_expPage(TemplateView):
@@ -124,5 +125,16 @@ def result_page_view(request, slug):
         return render(request, 'main/result.html', context)
     pass
 
-class SearchPage(TemplateView):
+
+class SearchPage(ListView):
+    model = Article
     template_name = 'main/search.html'
+    context_object_name = 'article'
+
+    def get_queryset(self):  # новый
+        query = self.request.GET.get('q')
+        object_list = Article.objects.filter(
+            Q(name__icontains=query)
+        )
+        return object_list
+
