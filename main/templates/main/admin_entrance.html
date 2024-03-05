@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-1">
+    <div class="content">
+        <h1 class="admin_title">Войти в админ-панель:</h1>
+        <form method="POST">
+            <div class="form_group">
+                <label class="classic_label">Логин:</label>
+                <input type="text">
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Пароль:</label>
+                <input type="password">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -109,3 +109,113 @@ textarea {
 .save_exp_btn{
     text-align: center;
 }
+
+.admin_item{
+    display: flex;
+    justify-content: space-between;
+    background-color: #C9C9C9;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.admin_item:hover{
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.admin_item_button{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    border: solid black 2px;
+    padding: 2px;
+}
+
+.admin_item_button:hover{
+    background-color: #B7B7B7;
+}
+
+.black:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.admin_add_button{
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    background-color: #000072;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    align-items: center;
+}
+
+.admin_exp_up{
+    display: grid;
+    grid-template-columns: 55px auto 275px;
+    margin-bottom: 25px;
+}
+
+.admin_news_up{
+    display: grid;
+    grid-template-columns: 55px auto 235px;
+    margin-bottom: 25px;
+}
+
+.admin_news_up h1{
+    margin: auto auto;
+}
+
+.admin_events_up{
+    display: grid;
+    grid-template-columns: 55px auto 291px;
+    margin-bottom: 25px;
+}
+
+.admin_events_up h1{
+    margin: auto auto;
+}
+
+.admin_exp_up h1{
+    margin: auto auto;
+}
+
+.admin_exp_main_item{
+    display: flex;
+    justify-content: space-between;
+    background-color: #C9C9C9;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.admin_exp_main_item:hover{
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.exp_checkbox{
+    display: flex;
+    justify-content: start;
+    gap: 7px;
+    align-items: center;
+}
+
+.exp_checkbox input{
+    height: 30px;
+    width: 30px;
+}
+
+.admin_exp_items_title{
+    display: grid;
+    grid-template-columns: 55px auto;
+    margin-bottom: 25px;
+}
+
+.admin_exp_items_title h1{
+    margin: auto auto;
+}

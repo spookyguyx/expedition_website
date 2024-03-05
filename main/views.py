@@ -6,6 +6,54 @@ from .models import *
 class Add_expPage(TemplateView):
     template_name = 'main/add.html'
 
+class Admin_entrancePage(TemplateView):
+    template_name = 'main/admin_entrance.html'
+
+class Admin_mainPage(TemplateView):
+    template_name = 'main/admin_main.html'
+
+class Admin_exp_mainPage(TemplateView):
+    template_name = 'main/admin_exp_main.html'
+
+class Admin_exp_itemsPage(TemplateView):
+    template_name = 'main/admin_exp_items.html'
+
+class Admin_partnersPage(TemplateView):
+    template_name = 'main/admin_partners.html'
+
+class Admin_partners_addPage(TemplateView):
+    template_name = 'main/admin_partners_add.html'
+
+class Admin_teamPage(TemplateView):
+    template_name = 'main/admin_team.html'
+
+class Admin_team_addPage(TemplateView):
+    template_name = 'main/admin_team_add.html'
+
+class Admin_eventsPage(TemplateView):
+    template_name = 'main/admin_events.html'
+
+class Admin_events_addPage(TemplateView):
+    template_name = 'main/admin_events_add.html'
+
+class Admin_photoarchivePage(TemplateView):
+    template_name = 'main/admin_photoarchive.html'
+
+class Admin_photoarchive_commPage(TemplateView):
+    template_name = 'main/admin_photoarchive_comm.html'
+
+class Admin_newsPage(TemplateView):
+    template_name = 'main/admin_news.html'
+
+class Admin_news_addPage(TemplateView):
+    template_name = 'main/admin_news_add.html'
+
+class Admin_publicationsPage(TemplateView):
+    template_name = 'main/admin_publications.html'
+
+class Admin_publications_addPage(TemplateView):
+    template_name = 'main/admin_publications_add.html'
+
 class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
