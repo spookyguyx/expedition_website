@@ -33,9 +33,11 @@
             <div class="exp_title">
                 <p>О проекте</p>
             </div>
-            <div class="exp_text">
-                <p>{{ el.text }}</p>
-            </div>
+            {% autoescape off %}
+                <div class="exp_text">
+                    <p>{{ el.text|linebreaks|urlize|safe }}</p>
+                </div>
+            {% endautoescape %}
         </div>
             <div class="photo">
                 {% for ele in images %}
