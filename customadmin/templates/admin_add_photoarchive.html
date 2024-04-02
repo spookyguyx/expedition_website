@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="admin_exp_items_title">
-            <a href="#" class="black">
+            <a href="{{ url_data }}" class="black">
                 <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect x="55" y="55" width="55" height="55" transform="rotate(-180 55 55)" fill="url(#pattern0)"/>
                 <defs>
@@ -20,24 +20,20 @@
             </a>
             <h1 class="admin_title">Добавить участника:</h1>
         </div>
-        <form method="POST">
-            <div class="teams_items">
-                <div class="teams_item">
-                    <div class="form_group">
-                        <label class="classic_label">ФИО участника:</label>
-                        <input type="text">
-                    </div>
-                    <div class="form_group">
-                        <label class="classic_label">Роль в команде:</label>
-                        <input type="text">
-                    </div>
-                    <div class="form_group form_group_file">
-                        <input type="file" name="file" id="file" class="add_file">
-                        <label for="file"><span>Загрузить фото</span></label>
-                    </div>
-                </div>
-            </div>
-        </form>
+        <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <h3>Uploaded Files:</h3>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ file.file.url }}">{{ file.file.name }}</a></li>
+        {% empty %}
+            <li>No files uploaded yet.</li>
+        {% endfor %}
+    </ul>
     </div>
 </div>
 {% endblock %}

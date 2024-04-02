@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="admin_exp_items_title">
-            <a href="#" class="black">
+            <a href="{% url 'admin_exp' %}" class="black">
                 <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect x="55" y="55" width="55" height="55" transform="rotate(-180 55 55)" fill="url(#pattern0)"/>
                 <defs>
@@ -18,12 +18,12 @@
                 </defs>
                 </svg>
             </a>
-            <h1 class="admin_title">Экспедиция ИДНАКАР (2022)</h1>
+            <h1 class="admin_title">{{ el.name }}</h1>
         </div>
         <a href="#" class="black">
             <div class="admin_item">
                 <p>Партнёры проекта</p>
-                <a href="#" class="black">
+                <a href="{% url 'admin_partners' el.article_slug %}" class="black">
                     <div class="admin_item_button">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
@@ -34,10 +34,10 @@
                 </a>
             </div>
         </a>
-        <a href="#" class="black">
+        <a href="{% url 'admin_team' el.article_slug %}" class="black">
             <div class="admin_item">
                 <p>Команда проекта</p>
-                <a href="#" class="black">
+                <a href="{% url 'admin_team' el.article_slug %}" class="black">
                     <div class="admin_item_button">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
@@ -62,10 +62,10 @@
                 </a>
             </div>
         </a>
-        <a href="#" class="black">
+        <a href="{% url 'admin_archive' el.article_slug %}" class="black">
             <div class="admin_item">
                 <p>Фотоархив</p>
-                <a href="#" class="black">
+                <a href="{% url 'admin_archive' el.article_slug %}" class="black">
                     <div class="admin_item_button">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>

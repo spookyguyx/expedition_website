@@ -101,7 +101,7 @@ class ExpeditionPage(DetailView):
 def photo_page_view(request, slug):
     if request.method == 'GET':
         context = {
-            'archive': ArticleImage.objects.filter(post__article_slug=slug)
+            'archive': PhotoHome.objects.filter(photo_home_id_slug=slug)
         }
         return render(request, 'main/photo.html', context)
     pass

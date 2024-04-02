@@ -8,14 +8,16 @@
     <div class="content">
         <h1 class="admin_title">Войти в админ-панель:</h1>
         <form method="POST">
+            {% csrf_token %}
             <div class="form_group">
                 <label class="classic_label">Логин:</label>
-                <input type="text">
+                <input type="text" name="username" id="username">
             </div>
             <div class="form_group">
                 <label class="classic_label">Пароль:</label>
-                <input type="password">
+                <input type="password" name="password" id="password">
             </div>
+            <button class="btn-large" style="width:100%">
         </form>
     </div>
 </div>

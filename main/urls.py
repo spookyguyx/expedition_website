@@ -1,4 +1,5 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 from .views import *
 
 
@@ -6,9 +7,6 @@ urlpatterns = [
     path('', HomePage.as_view(), name='home'),
     path('publication/', PublicationPage.as_view(), name='publication'),
     path('news/', NewsPage.as_view(), name='news'),
-    path('addexp/', Add_expPage.as_view(), name='addexp'),
-    path('adminent/', Admin_entrancePage.as_view(), name='adminent'),
-    path('adminmain/', Admin_mainPage.as_view(), name='adminmain'),
     path('adminexpmain/', Admin_exp_mainPage.as_view(), name='adminexpmain'),
     path('adminexpitems/', Admin_exp_itemsPage.as_view(), name='adminexpitems'),
     path('adminpartners/', Admin_partnersPage.as_view(), name='adminpartners'),

@@ -1,15 +1,17 @@
 from django.db import models
+from django.conf import settings
+from autoslug import AutoSlugField
 
 
 class Article(models.Model):
-    name = models.CharField(max_length=50)
-    name_long = models.CharField(max_length=75)
-    text = models.TextField()
-    photo_main_page = models.ImageField()
+    name = models.CharField(max_length=50, blank=True)
+    name_long = models.CharField(max_length=75, blank=True)
+    text = models.TextField(blank=True)
+    photo_main_page = models.ImageField(blank=True)
     current_expedition = models.BooleanField()
-    photo_archive = models.FileField()
-    video = models.CharField(max_length=100)
-    article_slug = models.SlugField()
+    photo_archive = models.FileField(blank=True)
+    video = models.CharField(max_length=100, blank=True)
+    article_slug = AutoSlugField(populate_from='name', editable=True, always_update=True)
 
     def __str__(self):
         return self.name
@@ -18,7 +20,6 @@ class Article(models.Model):
 class PhotoHome(models.Model):
     photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     photo_home = models.ImageField()
-
 
 
 class ResultsExpedition(models.Model):
@@ -32,8 +33,7 @@ class Partners(models.Model):
     partners = models.TextField()
     photo_partners = models.ImageField()
 
-    def __str__(self):
-        return self.partners_id
+
 
 
 class ArticleImage(models.Model):
@@ -66,7 +66,7 @@ class Team(models.Model):
     team_id = models.ForeignKey("Article", on_delete=models.CASCADE)
     members_name = models.CharField(max_length=75)
     role_member = models.CharField(max_length=50)
-    photo_members = models.FileField()
+    photo_members = models.ImageField(blank=True)
 
 
 

@@ -18,20 +18,15 @@
                 </defs>
                 </svg>
             </a>
-            <h1 class="admin_title">Добавить партнёра:</h1>
+            <h1 class="admin_title">Добавить публикацию:</h1>
         </div>
-        <form method="POST">
-            <div class="partners_items">
-                <div class="partners_item">
-                    <div class="form_group">
-                        <label class="classic_label">Название организации:</label>
-                        <input type="text">
-                    </div>
-                    <div class="form_group form_group_file">
-                        <input type="file" name="file" id="file" class="add_file">
-                        <label for="file"><span>Загрузить фото</span></label>
-                    </div>
-                </div>
+         <form method="POST">
+             {% csrf_token %}
+            {{form.partners_id}}<br>
+            {{form.partners}}<br>
+            {{form.photo_partners}}<br>
+            <div class="save_exp_btn">
+                <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
             </div>
         </form>
     </div>
