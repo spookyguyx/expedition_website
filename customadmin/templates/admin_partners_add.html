@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="admin_exp_items_title">
-            <a href="#" class="black">
+            <a href="{{url_data}}" class="black">
                 <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect x="55" y="55" width="55" height="55" transform="rotate(-180 55 55)" fill="url(#pattern0)"/>
                 <defs>
@@ -20,7 +20,7 @@
             </a>
             <h1 class="admin_title">Добавить публикацию:</h1>
         </div>
-         <form method="POST">
+         <form method="POST" enctype="multipart/form-data">
              {% csrf_token %}
             {{form.partners_id}}<br>
             {{form.partners}}<br>

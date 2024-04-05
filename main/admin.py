@@ -22,7 +22,7 @@ class PostImageAdmin(admin.ModelAdmin):
 
 
 class NewsAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"news_slug":["name"]}
+    prepopulated_fields = {"news_slug": ["name"]}
 
 
 admin.site.register(Slider)

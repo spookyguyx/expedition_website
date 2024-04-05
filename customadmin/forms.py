@@ -16,7 +16,6 @@ class ArticlesForm(forms.ModelForm):
 
 
 class TeamForm(forms.ModelForm):
-
     class Meta:
         model = Team
         fields = ['team_id',
@@ -28,13 +27,57 @@ class TeamForm(forms.ModelForm):
 
 
 class PartnersForm(forms.ModelForm):
-
     class Meta:
         model = Partners
         fields = ['partners_id',
                   'partners',
                   'photo_partners',
                   ]
+        widgets = {'partners_id': forms.HiddenInput}
+
+
+class MapForm(forms.ModelForm):
+    class Meta:
+        model = Map
+        fields = ['post',
+                  'maps',
+                  ]
+        widgets = {'post': forms.HiddenInput}
+
+
+class NewsForm(forms.ModelForm):
+    class Meta:
+        model = News
+        fields = ['name',
+                  'text',
+                  'photo',
+                  'video',
+                  'news_slug'
+
+                  ]
+
+
+class EventForm(forms.ModelForm):
+    class Meta:
+        model = Events
+        fields = ['event_id',
+                  'title_event',
+                  'date_event',
+                  'photo_events',
+                  'description_event',
+                  'slug'
+                  ]
+        widgets = {'event_id': forms.HiddenInput}
+
+
+class ResultForm(forms.ModelForm):
+    class Meta:
+        model = ResultsExpedition
+        fields = ['result',
+                  'text_result',
+                  'image'
+                  ]
+        widgets = {'result': forms.HiddenInput}
 
 
 class MultipleFileInput(forms.ClearableFileInput):
@@ -57,7 +100,4 @@ class MultipleFileField(forms.FileField):
 
 class UploadFileForm(forms.Form):
     files = MultipleFileField()
-    photo_home_id = forms.HiddenInput()
-
-
-
+    post = forms.HiddenInput()

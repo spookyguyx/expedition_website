@@ -20,12 +20,10 @@
             </a>
             <h1 class="admin_title">Добавить участника:</h1>
         </div>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{form.team_id}}<br>
-            {{form.members_name}}<br>
-            {{form.role_member}}<br>
-            {{form.photo_members}}<br>
+            {{ form.as_p }}<br>
+
             <div class="save_exp_btn">
                 <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
             </div>

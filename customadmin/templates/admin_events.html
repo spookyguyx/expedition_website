@@ -18,8 +18,8 @@
                 </defs>
                 </svg>
             </a>
-            <h1>Мероприятия Экспедиции ИДНАКАР (2022)</h1>
-            <a href="#" class="black">
+            <h1>{{el.name}}</h1>
+            <a href="{% url 'add_event' el.article_slug %}" class="black">
                 <div class="admin_add_button">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
@@ -29,36 +29,18 @@
                 </div>
             </a>
         </div>
-        <a href="#" class="black">
-            <div class="admin_item">
-                <p>Мероприятие 1</p>
-                <a href="#" class="black">
-                    <div class="admin_item_button">
-                        <p>Удалить</p>
-                    </div>
-                </a>
-            </div>
-        </a>
-        <a href="#" class="black">
-            <div class="admin_item">
-                <p>Мероприятие 2</p>
-                <a href="#" class="black">
-                    <div class="admin_item_button">
-                        <p>Удалить</p>
-                    </div>
-                </a>
-            </div>
-        </a>
-        <a href="#" class="black">
-            <div class="admin_item">
-                <p>Мероприятие 3</p>
-                <a href="#" class="black">
-                    <div class="admin_item_button">
-                        <p>Удалить</p>
-                    </div>
-                </a>
-            </div>
-        </a>
+        {% for el in event %}
+            <a href="#" class="black">
+                <div class="admin_item">
+                    <p>{{el.title_event}}</p>
+                    <a href="#" class="black">
+                        <div class="admin_item_button">
+                            <p>Удалить</p>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

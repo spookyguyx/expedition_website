@@ -48,10 +48,10 @@
                 </a>
             </div>
         </a>
-        <a href="#" class="black">
+        <a href="{% url 'admin_events' el.article_slug %}" class="black">
             <div class="admin_item">
                 <p>Мероприятия</p>
-                <a href="#" class="black">
+                <a href="{% url 'admin_events' el.article_slug %}" class="black">
                     <div class="admin_item_button">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
@@ -66,6 +66,48 @@
             <div class="admin_item">
                 <p>Фотоархив</p>
                 <a href="{% url 'admin_archive' el.article_slug %}" class="black">
+                    <div class="admin_item_button">
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
+                        <line x1="35" y1="18.6434" y2="18.6434" stroke="black" stroke-width="8"/>
+                        </svg>
+                        <p>Добавить</p>
+                    </div>
+                </a>
+            </div>
+        </a>
+        <a href="#" class="black">
+            <div class="admin_item">
+                <p>Карта</p>
+                <a href="{% url 'admin_map' el.article_slug %}" class="black">
+                    <div class="admin_item_button">
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
+                        <line x1="35" y1="18.6434" y2="18.6434" stroke="black" stroke-width="8"/>
+                        </svg>
+                        <p>Добавить</p>
+                    </div>
+                </a>
+            </div>
+        </a>
+        <a href="{% url 'admin_archive' el.article_slug %}" class="black">
+            <div class="admin_item">
+                <p>Фото</p>
+                <a href="{% url 'admin_photo' el.article_slug %}" class="black">
+                    <div class="admin_item_button">
+                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>
+                        <line x1="35" y1="18.6434" y2="18.6434" stroke="black" stroke-width="8"/>
+                        </svg>
+                        <p>Добавить</p>
+                    </div>
+                </a>
+            </div>
+        </a>
+        <a href="{% url 'admin_result' el.article_slug %}" class="black">
+            <div class="admin_item">
+                <p>Результаты экспедиции</p>
+                <a href="{% url 'admin_result' el.article_slug %}" class="black">
                     <div class="admin_item_button">
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <line x1="17.3926" y1="35" x2="17.3926" stroke="black" stroke-width="8"/>

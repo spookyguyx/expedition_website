@@ -16,6 +16,9 @@ class Article(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return f'/admin/admin_exp'
+
 
 class PhotoHome(models.Model):
     photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
@@ -34,11 +37,9 @@ class Partners(models.Model):
     photo_partners = models.ImageField()
 
 
-
-
 class ArticleImage(models.Model):
     post = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
-    images = models.FileField()
+    images = models.ImageField()
 
     def __str__(self):
         return self.images.name
@@ -49,14 +50,13 @@ class Map(models.Model):
     maps = models.CharField(max_length=100)
 
 
-
-
 class Events(models.Model):
     event_id = models.ForeignKey("Article", on_delete=models.CASCADE)
     title_event = models.CharField(max_length=100)
-    date_event = models.DateField()
+    date_event = models.CharField(max_length=25)
     photo_events = models.ImageField()
     description_event = models.TextField()
+    slug = AutoSlugField(populate_from='title_event', editable=True, always_update=True, blank=True)
 
     def __str__(self):
         return self.title_event
@@ -69,7 +69,6 @@ class Team(models.Model):
     photo_members = models.ImageField(blank=True)
 
 
-
 class Slider(models.Model):
     photo = models.ImageField()
 
@@ -79,7 +78,7 @@ class News(models.Model):
     text = models.TextField()
     photo = models.ImageField()
     video = models.TextField()
-    news_slug = models.SlugField()
+    news_slug = AutoSlugField(populate_from='name', editable=True, always_update=True, blank=True)
 
     def __str__(self):
         return self.name
