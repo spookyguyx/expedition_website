@@ -21,15 +21,26 @@
             <h1 class="admin_title">Добавить мероприятие:</h1>
         </div>
          <form method="POST" enctype="multipart/form-data">
-
              {% csrf_token %}
              {{ form.event_id }}<br>
-             {{ form.title_event }}<br>
-             {{ form.date_event }}<br>
-             {{ form.photo_events }}<br>
-             {{ form.description_event }}<br>
+             <div class="form_group">
+                 <label class="classic_label">Название:</label>
+                 {{ form.title_event }}
+             </div>
+             <div class="form_group">
+                 <label class="classic_label">Дата:</label>
+                 {{ form.date_event }}
+             </div>
+             <div class="form_group">
+                 <label class="classic_label">Описание:</label>
+                 {{ form.description_event }}
+             </div>
+             <div class="form_group_file">
+                <label class="classic_label">Загрузить фото:</label>
+                {{ form.photo_events }}
+             </div>
             <div class="save_exp_btn">
-                <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
+                <button type="submit" class="exp_btn">Добавить мероприятие</button>
             </div>
         </form>
     </div>

@@ -35,7 +35,9 @@ h1{
 .form_group{
     margin-bottom: 12px;
 }
-
+.form_group_file{
+    margin-bottom: 12px;
+}
 .classic_label, .form_group input {
       display: block;
       width: 100%;
@@ -206,8 +208,11 @@ textarea {
 }
 
 .exp_checkbox input{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
+}
+.exp_checkbox p{
+    font-size: 18px;
 }
 
 .admin_exp_items_title{

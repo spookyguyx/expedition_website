@@ -22,13 +22,25 @@
         </div>
          <form method="POST" enctype="multipart/form-data">
              {% csrf_token %}
-             {{form.name}}<br>
-             {{form.text}}<br>
-             {{form.photo}}<br>
-             {{form.video}}<br>
+             <div class="form_group">
+                 <label class="classic_label">Название:</label>
+                 {{form.name}}
+             </div>
+             <div class="form_group">
+                 <label class="classic_label">Описание:</label>
+                 {{form.text}}
+             </div>
+             <div class="form_group">
+                 <label class="classic_label">Видеоматериал:</label>
+                 {{form.video}}
+             </div>
+             <div class="form_group_file">
+                <label class="classic_label">Загрузить фото:</label>
+                {{form.photo}}
+             </div>
              <div class="save_exp_btn">
-                <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
-            </div>
+                <button type="submit" class="exp_btn">Добавить новость</button>
+             </div>
 
         </form>
     </div>

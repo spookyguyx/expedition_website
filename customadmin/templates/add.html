@@ -9,15 +9,36 @@
         <h1 class="admin_title">Добавить экспедицию:</h1>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{form.name}}<br>
-            {{form.name_long}}<br>
-            {{form.text}}<br>
-            {{form.photo_main_page}}<br>
-            {{form.current_expedition}}<br>
-            {{form.video}}<br>
-            {{form.article_slug}}<br>
+            <div class="form_group">
+                <label class="classic_label">Короткое название экспедиции:</label>
+                {{form.name}}
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Полное название экспедиции:</label>
+                {{form.name_long}}
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Описание проекта:</label>
+                {{form.text}}<br>
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Видеоматериал:</label>
+                {{form.video}}
+            </div>
+            <div class="form_group_file">
+                <label class="classic_label">Загрузить фото для главной страницы:</label>
+                {{form.photo_main_page}}
+            </div>
+            <div class="form_group">
+                <label class="classic_label">Article_slug:</label>
+                {{form.article_slug}}
+            </div>
+            <div class="exp_checkbox">
+                {{form.current_expedition}}<br>
+                <p>Завершенная<p>
+            </div>
             <div class="save_exp_btn">
-                <button type="submit" class="exp_btn" value="Сохранить экспедицию"></button>
+                <button type="submit" class="exp_btn" value="Сохранить экспедицию">Добавить экспедицию</button>
             </div>
         </form>
 
