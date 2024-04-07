@@ -32,7 +32,7 @@
             </a>
         </div>
         {% for el in news %}
-            <a href="{% url 'update_news' %}" class="btn btn-danger">Редактировать</a>
+            <a href="{% url 'update_news' el.news_slug   %}" class="btn btn-danger">Редактировать</a>
             <a href="#" class="black">
                 <div class="admin_item">
                     <p>{{el.name}}</p>

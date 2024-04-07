@@ -7,14 +7,9 @@ class Article(models.Model):
     name = models.CharField(max_length=50, blank=True)
     name_long = models.CharField(max_length=75, blank=True)
     text = models.TextField(blank=True)
-    photo_main_page = models.ImageField(blank=True)
-    current_expedition = models.BooleanField()
-    photo_archive = models.FileField(blank=True)
+    current_expedition = models.BooleanField(blank=True)
     video = models.CharField(max_length=100, blank=True)
-    article_slug = AutoSlugField(populate_from='name', editable=True, always_update=True)
-
-    def __str__(self):
-        return self.name
+    article_slug = AutoSlugField(populate_from='name', editable=True, always_update=True, blank=True)
 
     def get_absolute_url(self):
         return f'/admin/admin_exp'

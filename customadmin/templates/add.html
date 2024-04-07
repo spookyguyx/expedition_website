@@ -25,18 +25,11 @@
                 <label class="classic_label">Видеоматериал:</label>
                 {{form.video}}
             </div>
-            <div class="form_group_file">
-                <label class="classic_label">Загрузить фото для главной страницы:</label>
-                {{form.photo_main_page}}
-            </div>
-            <div class="form_group">
-                <label class="classic_label">Article_slug:</label>
-                {{form.article_slug}}
-            </div>
             <div class="exp_checkbox">
                 {{form.current_expedition}}<br>
                 <p>Завершенная<p>
             </div>
+            {{form.article_slug}}
             <div class="save_exp_btn">
                 <button type="submit" class="exp_btn" value="Сохранить экспедицию">Добавить экспедицию</button>
             </div>

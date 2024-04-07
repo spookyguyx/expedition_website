@@ -22,7 +22,10 @@
         </div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.as_p }}<br>
+            {{ form.team_id }}<br>
+            {{ form.members_name }}<br>
+            {{ form.role_member }}<br>
+            {{ form.photo_members }}<br>
             <div class="save_exp_btn">
                 <button type="submit" class="exp_btn">Добавить участника</button>
             </div>

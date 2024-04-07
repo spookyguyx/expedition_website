@@ -8,11 +8,11 @@ class ArticlesForm(forms.ModelForm):
         fields = ['name',
                   'name_long',
                   'text',
-                  'photo_main_page',
                   'current_expedition',
                   'video',
                   'article_slug'
                   ]
+        widgets = {'article_slug': forms.HiddenInput}
 
 
 class TeamForm(forms.ModelForm):

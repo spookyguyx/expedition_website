@@ -320,6 +320,8 @@ class NewsUpdateView(UpdateView, LoginRequiredMixin):
     model = News
     template_name = 'admin_news_add.html'
     form_class = NewsForm
+    slug_field = 'news_slug'
+    context_object_name = 'el'
 
 
 class Admin_result(LoginRequiredMixin, DetailView):

@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin_exp/<slug:slug>/delete/', ArticleDeliteView.as_view(), name='admin_delete'),
     path('admin_news/', admin_news, name='admin_news'),
     path('admin_news/add_news/', admin_add_news, name='admin_add_news'),
-    path('admin_news/update/', NewsUpdateView.as_view(), name='update_news'),
+    path('admin_news/<slug:slug>/update/', NewsUpdateView.as_view(), name='update_news'),
     path('admin_exp/<slug:slug>/result/', Admin_result.as_view(), name='admin_result'),
     path('admin_exp/<slug:slug>/result/add_result', admin_add_result, name='add_result'),
 ]
