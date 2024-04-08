@@ -3,10 +3,6 @@ from django.contrib import admin
 from .models import *
 
 
-class ArticleAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"article_slug": ["name"]}
-
-
 class ArticleImageAdmin(admin.StackedInline):
     model = ArticleImage
 
@@ -14,6 +10,7 @@ class ArticleImageAdmin(admin.StackedInline):
 @admin.register(Article)
 class PostAdmin(admin.ModelAdmin):
     inlines = [ArticleImageAdmin]
+    prepopulated_fields = {"article_slug": ["name"]}
 
     class Meta:
         model = Article
@@ -25,7 +22,7 @@ class PostImageAdmin(admin.ModelAdmin):
 
 
 class NewsAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"news_slug":["name"]}
+    prepopulated_fields = {"news_slug": ["name"]}
 
 
 admin.site.register(Slider)

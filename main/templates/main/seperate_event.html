@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Новость{% endblock %}
+{% block style1 %}
+<link rel="stylesheet" href="{% static 'css/separate_news.css' %}">
+{% endblock %}
+{% block content %}
+<h3 class="text-news">{{ el.name }}</h3>
+<div class="container-1">
+    {% for el in event %}
+        <div class="news_img">
+            <img class="news_img1" src="{{ el.photo_events.url }}" alt="gggg">
+        </div>
+    {% endfor %}
+
+        <p class="text_news">
+            {{ el.text }} eragsdefvb
+        </p>
+
+</div>
+
+{% endblock %}
