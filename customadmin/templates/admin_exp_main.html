@@ -30,15 +30,15 @@
             </a>
         </div>
         {% for el in articles %}
-         <a href="{% url 'admin_update' el.article_slug   %}" class="btn btn-danger">Редактировать</a>
-         <a href="{% url 'admin_delete' el.article_slug   %}" class="btn btn-danger">Удалить</a>
+         <a href="{% url 'admin_update' el.article_slug %}" class="btn btn-danger">Редактировать</a>
+         <a href="{% url 'admin_delete' el.article_slug %}" class="btn btn-danger">Удалить</a>
             <a href="{{ el.article_slug }}" class="black">
                 <div class="admin_exp_main_item">
                     <p>{{ el.name }}</p>
-                    <div class="exp_checkbox">
+                    <!--<div class="exp_checkbox">
                         <input type="checkbox" id="completedExp" name="completedExp" value="completedExp" />
                         <p>Завершенная<p>
-                    </div>
+                    </div>-->
                 </div>
             </a>
         {% endfor %}

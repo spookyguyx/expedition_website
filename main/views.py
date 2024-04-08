@@ -8,10 +8,14 @@ from django.utils.translation import gettext as _
 class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
-    context_object_name = 'articles'
+    # context_object_name = 'booba'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['images'] = Anons.objects.all()
+        for el in self.queryset:
+            el.home_img = PhotoHome.objects.get(photo_home_id__article_slug=el.article_slug).photo_home.url
+        context['articles'] = self.queryset
         return context
 
 

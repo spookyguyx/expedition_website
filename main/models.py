@@ -14,6 +14,9 @@ class Article(models.Model):
     def get_absolute_url(self):
         return f'/admin/admin_exp'
 
+    def __str__(self):
+        return self.name
+
 
 class PhotoHome(models.Model):
     photo_home_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)

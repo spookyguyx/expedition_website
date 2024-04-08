@@ -22,10 +22,19 @@
         </div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form.team_id }}<br>
-            {{ form.members_name }}<br>
-            {{ form.role_member }}<br>
-            {{ form.photo_members }}<br>
+            <div class="form_group">
+                <label class="classic_label">ФИО участника:</label>
+                {{ form.members_name }}
+            </div>
+            {{ form.team_id }}
+            <div class="form_group">
+                <label class="classic_label">Роль участника:</label>
+                {{ form.role_member }}
+            </div>
+            <div class="form_group_file">
+                <label class="classic_label">Добавить фото:</label>
+                {{ form.photo_members }}
+            </div>
             <div class="save_exp_btn">
                 <button type="submit" class="exp_btn">Добавить участника</button>
             </div>

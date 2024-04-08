@@ -32,14 +32,13 @@
               <div class="title">
                 <h1>Текущие экспедиции:</h1>
               </div>
-
                       <div class="expeditions_now">
                         <div class="expedition_items">
                             {% for el in articles %}
                                 {% if el.current_expedition == True %}
                                     <a href="{{ el.article_slug }}">
                                         <div class="expedition_item">
-                                            <img src="{{ el.photo_main_page.url }}">
+                                            <img src="{{ el.home_img }}">
                                             <div class="expedition_info">
                                                 <p>{{ el.name }}</p>
                                                 <p>{{ el.name_long }}</p>
@@ -60,7 +59,7 @@
                                 {% if el.current_expedition == False %}
                                     <a href="{{ el.article_slug }}">
                                         <div class="expedition_item">
-                                            <img src="{{ el.photo_main_page.url }}" alt="">
+                                            <img src="{{ el.home_img }}" alt="">
                                             <div class="expedition_info">
                                                 <p>{{ el.name }}</p>
                                                 <p>{{ el.name_long }}</p>
