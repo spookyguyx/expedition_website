@@ -30,6 +30,8 @@
             </a>
         </div>
         {% for el in team %}
+            <a href="{% url 'team_update' el.team_id.article_slug el.id   %}" class="btn btn-danger">Редактировать</a>
+            <a href="{% url 'team_delete' el.team_id.article_slug el.id   %}" class="btn btn-danger">Удалить</a>
             <a href="#" class="black">
                 <div class="admin_item">
                     <p>{{ el.members_name }}</p>

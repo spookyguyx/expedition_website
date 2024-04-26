@@ -12,7 +12,7 @@
         {% for el in news %}
             <div class="news_item">
                     <div class="photo">
-                        <a href="{{ el.news_slug }}">
+                        <a href="{% url 'separate_news' el.news_slug %}">
                             <img src="{{ el.photo.url }}" alt="team">
                         </a>
                     </div>

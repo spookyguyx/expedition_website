@@ -20,7 +20,6 @@
             </a>
             <h1>Новости</h1>
 
-            <a href="#" class="btn btn-danger">Удалить</a>
             <a href="{% url 'admin_add_news' %}" class="black">
                 <div class="admin_add_button">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,6 +32,7 @@
         </div>
         {% for el in news %}
             <a href="{% url 'update_news' el.news_slug   %}" class="btn btn-danger">Редактировать</a>
+            <a href="{% url 'delete_news' el.news_slug   %}" class="btn btn-danger">Удалить</a>
             <a href="#" class="black">
                 <div class="admin_item">
                     <p>{{el.name}}</p>

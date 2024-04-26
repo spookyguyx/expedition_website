@@ -9,6 +9,8 @@ class ArticlesForm(forms.ModelForm):
                   'name_long',
                   'text',
                   'current_expedition',
+                  'photo_main_page',
+                  'map',
                   'video',
                   'article_slug'
                   ]
@@ -27,34 +29,50 @@ class TeamForm(forms.ModelForm):
 
 
 class PartnersForm(forms.ModelForm):
+    partners_id = forms.ModelMultipleChoiceField(
+        queryset=Article.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        required=False
+    )
+
     class Meta:
         model = Partners
-        fields = ['partners_id',
+        fields = [
                   'partners',
                   'photo_partners',
+                  'partners_id',
                   ]
-        widgets = {'partners_id': forms.HiddenInput}
-
-
-class MapForm(forms.ModelForm):
-    class Meta:
-        model = Map
-        fields = ['post',
-                  'maps',
-                  ]
-        widgets = {'post': forms.HiddenInput}
 
 
 class NewsForm(forms.ModelForm):
+    articles = forms.ModelMultipleChoiceField(
+        queryset=Article.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        required=False
+    )
+
     class Meta:
         model = News
         fields = ['name',
                   'text',
                   'photo',
                   'video',
-                  'news_slug'
-
+                  'news_slug',
+                  'active_news',
+                  'articles'
                   ]
+
+
+class SliderForm(forms.ModelForm):
+    class Meta:
+        model = Slider
+        fields = ['photo']
+
+
+class PhotoArchiveForm(forms.ModelForm):
+    class Meta:
+        model = ArticleImage
+        fields = ['comment']
 
 
 class EventForm(forms.ModelForm):
@@ -65,9 +83,8 @@ class EventForm(forms.ModelForm):
                   'date_event',
                   'photo_events',
                   'description_event',
-                  'slug'
+                  'slug',
                   ]
-        widgets = {'event_id': forms.HiddenInput}
 
 
 class ResultForm(forms.ModelForm):

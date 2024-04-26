@@ -4,10 +4,10 @@ from .views import *
 
 
 urlpatterns = [
+    path('search/', SearchResultsView.as_view(), name='search_results'),
     path('', HomePage.as_view(), name='home'),
     path('publication/', PublicationPage.as_view(), name='publication'),
     path('news/', NewsPage.as_view(), name='news'),
-    path('search/', SearchPage.as_view(), name='search'),
     path('news/<slug:slug>/', Separate_newsPage.as_view(), name='separate_news'),
     path('<slug:slug>/', ExpeditionPage.as_view(), name='expedition'),
     path('<slug:slug>/photo/', photo_page_view, name='photo'),
@@ -16,4 +16,5 @@ urlpatterns = [
     path('<slug:slug>/events/', events_page_view, name='events'),
     path('<slug:slug>/result/', result_page_view, name='result'),
     path('<slug:slug>/events/<slug:event_slug>', EventDetail.as_view(), name='separate_events'),
+
 ]

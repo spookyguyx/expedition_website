@@ -31,6 +31,8 @@
         </div>
         <a href="#" class="black">
             {% for el in photo %}
+                <a href="{% url 'archive_update' el.post.article_slug el.id   %}" class="btn btn-danger">Редактировать</a>
+                <a href="{% url 'archive_delete' el.post.article_slug el.id   %}" class="btn btn-danger">Удалить</a>
                 <div class="admin_item">
                     <img src="{{ el.images.url }}" width="90" height="90">
                     <p>{{ el.images }}</p>

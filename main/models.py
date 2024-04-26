@@ -9,10 +9,15 @@ class Article(models.Model):
     text = models.TextField(blank=True)
     current_expedition = models.BooleanField(blank=True)
     video = models.CharField(max_length=100, blank=True)
+    photo_main_page = models.ImageField(blank=True)
+    map = models.TextField(blank=True)
     article_slug = AutoSlugField(populate_from='name', editable=True, always_update=True, blank=True)
 
     def get_absolute_url(self):
         return f'/admin/admin_exp'
+
+    def __str__(self):
+        return self.name
 
 
 class PhotoHome(models.Model):
@@ -27,7 +32,7 @@ class ResultsExpedition(models.Model):
 
 
 class Partners(models.Model):
-    partners_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
+    partners_id = models.ManyToManyField("Article", default=None, null=True, blank=True)
     partners = models.TextField()
     photo_partners = models.ImageField()
 
@@ -35,18 +40,14 @@ class Partners(models.Model):
 class ArticleImage(models.Model):
     post = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     images = models.ImageField()
+    comment = models.CharField(max_length=150, default='', null=True, blank=True)
 
     def __str__(self):
         return self.images.name
 
 
-class Map(models.Model):
-    post = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
-    maps = models.CharField(max_length=100)
-
-
 class Events(models.Model):
-    event_id = models.ForeignKey("Article", on_delete=models.CASCADE)
+    event_id = models.ForeignKey("Article", default=None, on_delete=models.CASCADE, null=True, blank=True)
     title_event = models.CharField(max_length=100)
     date_event = models.CharField(max_length=25)
     photo_events = models.ImageField()
@@ -58,9 +59,9 @@ class Events(models.Model):
 
 
 class Team(models.Model):
-    team_id = models.ForeignKey("Article", on_delete=models.CASCADE)
+    team_id = models.ForeignKey("Article", on_delete=models.CASCADE, default=None, null=True, blank=True)
     members_name = models.CharField(max_length=75)
-    role_member = models.CharField(max_length=50)
+    role_member = models.CharField(max_length=100)
     photo_members = models.ImageField(blank=True)
 
 
@@ -69,23 +70,16 @@ class Slider(models.Model):
 
 
 class News(models.Model):
+    articles = models.ManyToManyField('Article', blank=True, default=None, null=True)
     name = models.CharField(max_length=100)
     text = models.TextField()
     photo = models.ImageField()
     video = models.TextField()
+    active_news = models.BooleanField(blank=True)
     news_slug = AutoSlugField(populate_from='name', editable=True, always_update=True, blank=True)
 
     def __str__(self):
         return self.name
 
-
-class Anons(models.Model):
-    name = models.CharField(max_length=100)
-    text = models.TextField()
-    date = models.DateField()
-    photo = models.ImageField()
-
-    def __str__(self):
-        return self.name
 
 

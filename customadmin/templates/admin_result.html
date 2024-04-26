@@ -30,9 +30,11 @@
             </a>
         </div>
         {% for el in result %}
+            <a href="{% url 'result_update' el.result.article_slug el.id   %}" class="btn btn-danger">Редактировать</a>
+            <a href="{% url 'result_delete' el.result.article_slug el.id   %}" class="btn btn-danger">Удалить</a>
             <a href="#" class="black">
                 <div class="admin_item">
-                    <img src="{{ el.imaged.url }}" width="90" height="90">
+                    <img src="{{ el.image.url }}" width="90" height="90">
                     <a href="#" class="black">
                         <div class="admin_item_button">
                             <p>Удалить</p>

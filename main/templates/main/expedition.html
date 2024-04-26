@@ -66,33 +66,11 @@
                 </div>
                 <div class="swiper partners-slider">
                     <div class="swiper-wrapper">
+                      {% for element in partners %}
                       <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
+                        <img src="{{ element.photo_partners.url }}" alt="partner" class="partner">
                       </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
+                      {% endfor %}
                     </div>
                 </div>
             </div>

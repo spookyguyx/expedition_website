@@ -3,15 +3,19 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView, View
 from .models import *
 from django.utils.translation import gettext as _
+from django.db.models import Q
 
 
 class HomePage(ListView):
     template_name = 'main/main.html'
     queryset = Article.objects.all()
     context_object_name = 'articles'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['images'] = Anons.objects.all()
+        context['partners'] = Partners.objects.all()
+        context['news'] = News.objects.all()
+        context['slider'] = Slider.objects.all()
         return context
 
 
@@ -29,6 +33,7 @@ class ExpeditionPage(DetailView):
         context = super().get_context_data(**kwargs)
         slug = self.kwargs.get('slug')
         context['images'] = PhotoHome.objects.filter(photo_home_id__article_slug=slug)
+        context['partners'] = Partners.objects.filter(partners_id__article_slug=slug)
         return context
 
 
@@ -63,7 +68,7 @@ class Separate_newsPage(DetailView):
 def map_page_view(request, slug):
     if request.method == 'GET':
         context = {
-            'map': Map.objects.filter(post__article_slug=slug)
+            'map': Article.objects.filter(article_slug=slug)
         }
         return render(request, 'main/map.html', context)
     pass
@@ -81,7 +86,7 @@ def team_page_view(request, slug):
 def events_page_view(request, slug):
     if request.method == 'GET':
         context = {
-            'event': Events.objects.filter(event_id__article_slug=slug)
+            'event': News.objects.filter(articles__article_slug=slug)
         }
         return render(request, 'main/events.html', context)
     pass
@@ -105,9 +110,26 @@ def result_page_view(request, slug):
     pass
 
 
-
-class SearchPage(TemplateView):
+# def search_product(request):
+#     """ search function  """
+#     if request.method == "POST":
+#         query_name = request.POST.get('name', None)
+#         if query_name:
+#             results = Article.objects.filter(name__contains=query_name)
+#             return render(request, 'search.html', {"results": results})
+#
+#     return render(request, 'search.html')
+class SearchResultsView(ListView):
+    model = Article
     template_name = 'main/search.html'
+    slug_field = 'article_slug'
+
+    def get_queryset(self):  # новый
+        query = self.request.GET.get('q')
+        object_list = Article.objects.filter(
+            Q(name__icontains=query)
+        )
+        return object_list
 
 
 class EventDetail(DetailView):

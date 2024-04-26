@@ -8,7 +8,7 @@
     <div class="content">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    {% for element in images %}
+                    {% for element in slider %}
                         <div class="swiper-slide">
                             <img src="{{ element.photo.url }}" alt="Тутаев" class="img_anons">
                         </div>
@@ -43,6 +43,27 @@
                                             <div class="expedition_info">
                                                 <p>{{ el.name }}</p>
                                                 <p>{{ el.name_long }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                      </div>
+              <div class="title">
+                <h1>Новости</h1>
+              </div>
+
+                      <div class="expeditions_now">
+                        <div class="expedition_items">
+                            {% for el in news %}
+                                {% if el.active_news == True %}
+                                    <a href="{% url 'separate_news' el.news_slug %}">
+                                        <div class="expedition_item">
+                                            <img src="{{ el.photo.url }}">
+                                            <div class="expedition_info">
+                                                <p>{{ el.name }}</p>
+                                                <p>{{ el.text }}</p>
                                             </div>
                                         </div>
                                     </a>
@@ -92,33 +113,11 @@
                 </div>
                 <div class="swiper partners-slider">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
-                      <div class="swiper-slide">
-                        <img src="{% static 'images/partner2.png' %}" alt="partner" class="partner">
-                      </div>
+                        {% for element in partners %}
+                              <div class="swiper-slide">
+                                <img src="{{ element.photo_partners.url }}" alt="partner" class="partner">
+                              </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

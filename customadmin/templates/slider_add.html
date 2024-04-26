@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="admin_exp_items_title">
-            <a href="{{ url_data }}" class="black">
+            <a href="{% url 'admin_slider' %}" class="black">
                 <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect x="55" y="55" width="55" height="55" transform="rotate(-180 55 55)" fill="url(#pattern0)"/>
                 <defs>
@@ -18,14 +18,18 @@
                 </defs>
                 </svg>
             </a>
-            <h1 class="admin_title">Добавить участника:</h1>
+            <h1 class="admin_title">Добавить новость:</h1>
         </div>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}<br>
-            <div class="save_exp_btn">
-                <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
-            </div>
+         <form method="POST" enctype="multipart/form-data">
+             {% csrf_token %}
+             <div class="form_group_file">
+                <label class="classic_label">Загрузить фото:</label>
+                {{form.photo}}
+             </div>
+             <div class="save_exp_btn">
+                <button type="submit" class="exp_btn" value="Submit">Добавить новость</button>
+             </div>
+
         </form>
     </div>
 </div>

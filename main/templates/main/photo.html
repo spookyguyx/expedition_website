@@ -12,7 +12,7 @@
     <div class="gallery">
         {% for el in archive %}
             <div class="img">
-               <a href="{{ el.images.url }}" data-lightbox='mygallery' data-title="Солнечное затмение" font-szixe:40px><img src="{{ el.images.url }}"></a>
+               <a href="{{ el.images.url }}" data-lightbox='mygallery' data-title="{{el.comment}}" font-szixe:40px><img src="{{ el.images.url }}"></a>
             </div>
         {% endfor %}
 

@@ -7,7 +7,7 @@
 <div class="container-1">
     <div class="content">
         <div class="admin_exp_up">
-            <a href="{% url 'add_exp_items' el.article_slug %}" class="black">
+            <a href="{% url 'admin_main' %}" class="black">
                 <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect x="55" y="55" width="55" height="55" transform="rotate(-180 55 55)" fill="url(#pattern0)"/>
                 <defs>
@@ -19,7 +19,7 @@
                 </svg>
             </a>
             <h1>{{el.name}}</h1>
-            <a href="{% url 'add_partners' el.article_slug %}" class="black">
+            <a href="{% url 'add_partners' %}" class="black">
                 <div class="admin_add_button">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
@@ -30,6 +30,8 @@
             </a>
         </div>
         {% for el in partners %}
+            <a href="{% url 'partners_update' el.id  %}" class="btn btn-danger">Редактировать</a>
+            <a href="{% url 'partners_delete' el.id   %}" class="btn btn-danger">Удалить</a>
             <a href="#" class="black">
                 <div class="admin_item">
                     <p>{{ el.partners }}</p>
