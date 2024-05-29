@@ -18,15 +18,21 @@
                 </defs>
                 </svg>
             </a>
-            <h1 class="admin_title">Добавить участника:</h1>
+            <h1 class="admin_title">Добавить результат:</h1>
         </div>
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.result }}<br>
-            {{ form.text_result }}<br>
-            {{ form.image }}<br>
+            <div class="form_group">
+                <label class="classic_label label_many">Описание:</label>
+                {{ form.text_result }}
+            </div>
+            <div class="form_group_file">
+                <label class="classic_label">Добавить фото:</label>
+                {{ form.image }}
+            </div>
             <div class="save_exp_btn">
-                <button type="submit" class="exp_btn" value="Сохранить экспедицию">fdsfsd</button>
+                <button type="submit" class="exp_btn" value="Сохранить экспедицию">Сохранить</button>
             </div>
         </form>
     </div>

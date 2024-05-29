@@ -13,23 +13,22 @@
              <button class="search_btn" ><img class="lupa" src="{% static 'images/search.png' %}" alt=""></button>
          </form>
         <div class="border-bottom"></div>
-       <h1>Search Results</h1>
-        <ul>
-            {% for el in object_list %}
-                <li>
-                    <a href="{% url 'expedition' el.article_slug %}">
-                        <div class="expedition_item">
-                            <img src="{{ el.photo_main_page.url }}">
-                            <div class="expedition_info">
-                                <p>{{ el.name }}</p>
-                                <p>{{ el.name_long }}</p>
-                            </div>
+       <h3>Результаты поиска:</h3>
+                <div class="expeditions_now">
+                        <div class="expedition_items">
+                            {% for el in object_list %}
+                                    <a href="{% url 'expedition' el.article_slug %}">
+                                        <div class="expedition_item">
+                                            <img src="{{ el.photo_main_page.url }}">
+                                            <div class="expedition_info">
+                                                <p>{{ el.name }}</p>
+                                                <p>{{ el.name_long }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                            {% endfor %}
                         </div>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+                </div>
     </div>
-
 </div>
 {% endblock %}

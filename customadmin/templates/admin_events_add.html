@@ -22,7 +22,10 @@
         </div>
          <form method="POST" enctype="multipart/form-data">
              {% csrf_token %}
-             {{ form.event_id }}<br>
+             <div class="form_group">
+                 <label class="classic_label">Прикрепить к экспедиции:</label>
+                 {{ form.event_id }}<br>
+             </div>
              <div class="form_group">
                  <label class="classic_label">Название:</label>
                  {{ form.title_event }}
