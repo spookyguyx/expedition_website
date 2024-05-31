@@ -24,7 +24,6 @@
     transition: 0.5s;
 }
 .gallery img:hover{
-    filter: grayscale(80%);
     transform: scale(1.02);
 }
 .container .img-container{
@@ -36,7 +35,8 @@
 }
 @media (max-width:768px) {
     .gallery img{
-        width: 95%;
+        width: 85%;
+        height:85%
     }
 }
 
