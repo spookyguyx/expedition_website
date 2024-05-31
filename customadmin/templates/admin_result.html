@@ -18,14 +18,14 @@
                 </defs>
                 </svg>
             </a>
-            <h1>{{el.name}}</h1>
+            <h1>Результаты {{el.name}}</h1>
             <a href="{% url 'add_result' el.article_slug %}" class="black">
                 <div class="admin_add_button">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="20.4482" y1="40" x2="20.4482" stroke="white" stroke-width="8"/>
                     <line x1="40" y1="20.7354" y2="20.7354" stroke="white" stroke-width="8"/>
                     </svg>
-                    <p>Добавить мероприятие</p>
+                    <p>Добавить результат</p>
                 </div>
             </a>
         </div>
@@ -35,11 +35,6 @@
             <a href="#" class="black">
                 <div class="admin_item">
                     <img src="{{ el.image.url }}" width="90" height="90">
-                    <a href="#" class="black">
-                        <div class="admin_item_button">
-                            <p>Удалить</p>
-                        </div>
-                    </a>
                 </div>
             </a>
         {% endfor %}

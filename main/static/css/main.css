@@ -72,6 +72,13 @@ h1{
 .swiper{
     margin-bottom: 15px;
 }
+.expedition_items a:hover{
+    text-decoration:none;
+    color: black;
+}
+a{
+    text-decoration:none;
+}
 
 .expedition_item img{
     width: 600px;
@@ -85,6 +92,7 @@ h1{
     width: 600px;
     border-radius: 4px;
     margin-bottom: 2%;
+    min-height: 340px;
 }
 
 .expedition_item:hover{
@@ -165,6 +173,7 @@ h1{
 @media screen and (max-width: 1399px){
     .expedition_item{
         width: 524px;
+        min-height: 313px;
     }
     .expedition_item img{
         width: 524px;
@@ -174,6 +183,7 @@ h1{
 @media screen and (max-width: 1199px){
     .expedition_item{
         width: 434px;
+        min-height: 270px;
     }
     .expedition_item img{
         width: 434px;
@@ -195,6 +205,7 @@ h1{
 @media screen and (max-width: 1000px){
     .expedition_item{
         width: 405px;
+        min-height: 250px;
     }
     .expedition_item img{
         width: 405px;
@@ -346,4 +357,10 @@ h1{
     .patners_btn{
         margin-top: -25px;
     }
+}
+@media screen and (max-width: 470px){
+    .expedition_item{
+            width: 100%;
+            min-height: 100%;
+        }
 }

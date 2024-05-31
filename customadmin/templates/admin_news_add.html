@@ -39,12 +39,17 @@
                 {{form.photo}}
              </div>
              <div class="form_group_file">
-                <label class="classic_label">Загрузить фото:</label>
-                {{form.articles}}
+                <label class="classic_label">Прикрепить к экспедиции:</label>
+                 <div class="exp_checkbox">
+                    {{form.articles}}<br>
+                </div>
              </div>
              <div class="form_group_file">
-                <label class="classic_label">Загрузить фото:</label>
-                {{form.active_news }}
+                <label class="classic_label">Добавить на главную страницу:</label>
+                 <div class="exp_checkbox">
+                    {{form.active_news }}<br>
+                    <p>Актуальная новость<p>
+                 </div>
              </div>
              <div class="save_exp_btn">
                 <button type="submit" class="exp_btn" value="Submit">Добавить новость</button>
