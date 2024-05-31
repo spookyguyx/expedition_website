@@ -13,6 +13,7 @@ border-radius:5px;
 .border-bottom{
 border:1px solid #C9C9C9;
 color:red;
+margin-top:20px;
 }
 .search_text{
 margin-bottom:25px;
@@ -29,7 +30,23 @@ margin-bottom:10px;
 }
 .container-2{
 padding:30px;
+} 
+
+.search-wrapper2{
+text-align:center;
+background-color: white;
+    margin-bottom: 39px;
+    border-radius: 5px;
+    width:50%;
+    margin: auto;
+  display: flex;
 }
+
+.img_search{
+width:50%;
+height:50%;
+margin-top:20px;
+
 .expedition_items a:hover{
     text-decoration:none;
     color: black;
