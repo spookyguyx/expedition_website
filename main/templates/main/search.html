@@ -12,17 +12,20 @@
                                 <input name="q" type="search" placeholder="Поиск..." class="form-control">
          </form>
         <div class="border-bottom"></div>
-       <p>Результаты поиска</p>
-        <ul>
-            {% for el in object_list %}
-                <li>
-                    <a href="{% url 'expedition' el.article_slug %}">
-                        <div class="expedition_item">
-                            <img class="img_search" src="{{ el.photo_main_page.url }}">
-                            <div class="expedition_info">
-                                <p>{{ el.name }}</p>
-                                <p>{{ el.name_long }}</p>
-                            </div>
+       <h3 class="search_title">Результаты поиска:</h3>
+                <div class="expeditions_now">
+                        <div class="expedition_items">
+                            {% for el in object_list %}
+                                    <a href="{% url 'expedition' el.article_slug %}">
+                                        <div class="expedition_item">
+                                            <img src="{{ el.photo_main_page.url }}">
+                                            <div class="expedition_info">
+                                                <p>{{ el.name }}</p>
+                                                <p>{{ el.name_long }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                            {% endfor %}
                         </div>
                 </div>
     </div>

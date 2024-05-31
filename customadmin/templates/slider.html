@@ -35,13 +35,13 @@
                 <a href="{% url 'slider_update' el.id  %}" class="btn btn-danger">Редактировать</a>
                 <a href="{% url 'slider_delete' el.id  %}" class="btn btn-danger">Удалить</a>
                 <div class="admin_item">
-                    <img src="{{ el.photo.url }}" width="90" height="90">
+                    <img src="{{ el.photo.url }}" width="150" height="50">
                     <p>{{ el.photo_home }}</p>
-                    <a href="#" class="black">
+                    <!--<a href="#" class="black">
                         <div class="admin_item_button">
                             <p>Удалить</p>
                         </div>
-                    </a>
+                    </a>-->
                 </div>
             {% endfor %}
         </a>

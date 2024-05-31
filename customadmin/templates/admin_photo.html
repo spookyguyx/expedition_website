@@ -32,14 +32,14 @@
         <a href="#" class="black">
             {% for el in photo %}
                 <a href="{% url 'photo_delete' el.photo_home_id.article_slug el.id   %}" class="btn btn-danger">Удалить</a>
-                <div class="admin_item">
+                <div class="photoarchive_item">
                     <img src="{{ el.photo_home.url }}" width="90" height="90">
                     <p>{{ el.photo_home }}</p>
-                    <a href="#" class="black">
+                    <!--<a href="#" class="black">
                         <div class="admin_item_button">
                             <p>Удалить</p>
                         </div>
-                    </a>
+                    </a>-->
                 </div>
             {% endfor %}
         </a>
