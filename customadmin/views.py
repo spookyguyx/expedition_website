@@ -25,7 +25,7 @@ def admin_login(request):
 
             user_obj = authenticate(username=username, password=password)
 
-            if user_obj and user_obj.is_superuser:
+            if user_obj and user_obj.is_staff:
                 login(request, user_obj)
                 return redirect('admin_main/')
 
